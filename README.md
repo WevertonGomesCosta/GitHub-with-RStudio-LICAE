@@ -1,2 +1,3 @@
-# GitHub-with-RStudio-LICAE
- # Manual: Integrando o GitHub com o Rstudio. This book will teach an entire genomic prediction and selection workflow. Target audience are students of plant breeding and quantitative genetics as well as biostatisticians/informaticians tasked as responsible for genomic evaluations in their breeding program.  The pipeline this book will center on is as executed for the [NextGen Cassava Breeding Project](https://www.nextgencassava.org/) partner programs.
+# Manual: Integrando o GitHub com o Rstudio. 
+Bem-vindo! Esse manual irá ensinar como realizar todo o processo de criação de um repositório no GitHub até a integração do GitHub com o RStudio, visando otimizar e permitir a reprodução de materiais para o meio acadêmico.
+Esse curso foi desenvolvido para a capacitação dos membros do [Laboratório de Inteligência Computacional e Aprendizado Estatístico - LICAE](https://www.licae.ufv.br/).
