@@ -11,7 +11,7 @@
 
 <meta name="author" content="Costa, W. G." />
 
-<meta name="date" content="2022-07-15" />
+<meta name="date" content="2022-07-19" />
 
 <title>Home</title>
 
@@ -356,7 +356,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Home</h1>
 <h4 class="author">Costa, W. G.</h4>
-<h4 class="date">2022-07-15</h4>
+<h4 class="date">2022-07-19</h4>
 
 </div>
 
@@ -364,7 +364,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -375,8 +375,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -385,13 +385,13 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-07-15
+<strong>Last updated:</strong> 2022-07-19
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>GitHub-with-RStudio-LICAE/</code>
@@ -414,18 +414,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -516,15 +519,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtree8494a0218d0d293803be425c77872cbd9107ea2dtargetblank8494a02a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreed5e4b38dcc0d12dca27354677660b50029f6010btargetblankd5e4b38a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/8494a0218d0d293803be425c77872cbd9107ea2d" target="_blank">8494a02</a>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/d5e4b38dcc0d12dca27354677660b50029f6010b" target="_blank">d5e4b38</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtree8494a0218d0d293803be425c77872cbd9107ea2dtargetblank8494a02a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreed5e4b38dcc0d12dca27354677660b50029f6010btargetblankd5e4b38a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -534,7 +537,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/8494a0218d0d293803be425c77872cbd9107ea2d" target="_blank">8494a02</a>.
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/d5e4b38dcc0d12dca27354677660b50029f6010b" target="_blank">d5e4b38</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -550,6 +553,9 @@ were generated:
 <pre><code>
 Ignored files:
     Ignored:    .Rproj.user/
+
+Unstaged changes:
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -594,6 +600,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/d5e4b38dcc0d12dca27354677660b50029f6010b/docs/index.html" target="_blank">d5e4b38</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-07-15
+</td>
+<td>
+Test
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -806,72 +829,74 @@ Start workflowr project.
 </div>
 </div>
 <div id="create_project" class="section level1">
-<h1>Create a project</h1>
-<div id="create-a-github-repository" class="section level2">
-<h2>Create a GitHub repository</h2>
-<p>To avoid any conflict between RStudio and GitHub let’s create your
-repository first at GitHub.</p>
-<p>Go to your <a href="https://github.com/new">GitHub page</a> to create
-a new repository.</p>
+<h1>Crie um projeto</h1>
+<div id="crie-um-repositório-github" class="section level2">
+<h2>Crie um repositório GitHub</h2>
+<p>Para evitar qualquer conflito entre o RStudio e o GitHub, vamos criar
+seu repositório primeiro no GitHub.</p>
+<p>Acesse sua <a href="https://github.com/new">página do GitHub</a> para
+criar um novo repositório.</p>
 <p><img src="images/GitHubNewRepo.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>Add a creative name and a description to your repository, please
-leave as a public option, that will allow you to create a GitHub page to
-share your work with all of us.</p>
-<p>After that we are going to copy the <code>https link</code> of your
-repository to clone it with RStudio. Just click at the red button.</p>
+<p>Adicione um nome criativo e uma descrição ao seu repositório, deixe
+como opção pública, que permitirá que você crie uma página no GitHub
+para compartilhar seu trabalho com todos nós.</p>
+<p>Depois disso vamos copiar o <code>https::/link</code> do seu
+repositório para cloná-lo com o RStudio. Basta clicar no botão
+vermelho.</p>
 <p><img src="images/HttpsLink2CloneGHRepo.png"
 style="width:100.0%" /></p>
 <p><br></p>
-<p>Then let’s move to RStudio.</p>
-<p>To clone (Download) your repository from GitHub, click at the
-<code>Project</code> button on the top right of RStudio
-<code>(1˚)</code> then at <code>New Project...</code>.<br />
-<img src="images/CloneRepo1.png" style="width:100.0%" /></p>
+<p>Então vamos para o RStudio.</p>
+<p>Para clonar (Baixar) seu repositório do GitHub, clique no botão
+<code>Project</code> no canto superior direito do RStudio e depois em
+<code>New Project...</code>.</p>
+<p><img src="images/CloneRepo1.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>A window named <code>New Project Wizard</code> will appear, select
-<code>Version Control</code>, then <code>Git</code>.<br />
-<img src="images/CloneRepo2.png" style="width:100.0%" /></p>
+<p>Uma janela chamada <code>New Project Wizard</code> aparecerá,
+selecione <code>Version Control</code>, e depois <code>Git</code>.</p>
+<p><img src="images/CloneRepo2.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>This will open a window with the <code>Clone Git Repository</code>.
-Here you will just paste that link that I asked you to copy long time
-ago at the <code>Repository URL:</code> window. At the
-<code>Create project as subdirectory of:</code> select a directory of
-easy access for you, that will make it easier for you to locate it
-later.</p>
-<p><em>I suggest you to create a folder at your <code>Documents</code>
-to keep your <code>workflowr</code> projects organized.</em><br />
-<img src="images/CloneRepo3.png" style="width:100.0%" /></p>
+<p>Isso abrirá uma janela com o <code>Clone Git Repository</code>. Aqui
+você vai apenas colar aquele link que eu pedi para você copiar há muito
+tempo na janela <code>Repository URL:</code>. Em
+<code>Criar projeto como subdiretório de:</code> selecione um diretório
+de fácil acesso para você, que facilitará sua localização
+posteriormente.</p>
+<p><em>Eu sugiro que você crie uma pasta em seus <code>Documents</code>
+para manter seus projetos <code>workflow</code> organizados.</em></p>
+<p><img src="images/CloneRepo3.png" style="width:100.0%" /></p>
 <p><br> <br></p>
 </div>
-<div id="create-a-workflowr-project" class="section level2">
-<h2>Create a <code>workflowr</code> project</h2>
-<p><code>workflowr</code> package helps you to organize an analysis
-aiming to improve the project management, reproducibility, and team
-work. It works with the version control software git. Git is another
-incredible software that works as an version control, saving all the
-changes at your project that you make during the way, allowing to easily
-get back to older versions or track your changes or bugs.</p>
-<p>So let’s start installing the <code>workflowr</code> package</p>
+<div id="crie-um-projeto-workflow" class="section level2">
+<h2>Crie um projeto <code>workflow</code></h2>
+<p>O pacote <code>workflowr</code> ajuda você a organizar uma análise
+visando melhorar o gerenciamento do projeto, a reprodutibilidade e o
+trabalho em equipe. Funciona com o software de controle de versão git. O
+Git é outro software incrível que funciona como um controle de versão,
+salvando todas as alterações em seu projeto que você faz durante o
+caminho, permitindo voltar facilmente para versões mais antigas ou
+rastrear suas alterações ou bugs.</p>
+<p>Então vamos começar a instalar o pacote <code>workflowr</code></p>
 <pre class="r"><code>install.packages(&quot;workflowr&quot;)</code></pre>
 <p><br></p>
-<div id="starting-your-workflowr-project" class="section level3">
-<h3>Starting your workflowr project</h3>
-<p>Let’s start reading the <code>workflowr</code> package, and then
-running its function</p>
-<pre class="r"><code>library(workflowr)
+<div id="iniciando-seu-projeto-de-workflow" class="section level3">
+<h3>Iniciando seu projeto de workflow</h3>
+<p>Vamos começar a ler o pacote <code>workflowr</code>, e então executar
+sua função</p>
+<pre class="r"><code>biblioteca (workflowr)
 
 wflow_git_config(user.name = &quot;YourGitHubUserName&quot;, user.email = &quot;YourGitHubEmail&quot;)</code></pre>
 <p><br></p>
-<p><code>wflow_git_config</code> function will save the yours
-information of username and email linked to your GitHub account. That
-will be required to allow you to push all your changes at your project.
-<em>This configuration will only be necessary once per
-computer.</em></p>
-<p><br> Then we are going to create the <code>workflowr</code> directory
-structure with the <code>wflow_start</code> function. <em>Just pay
-attention that you already have a main directory for your project, but
-if you follow my steps everything will be fine.</em></p>
+<p>A função <code>wflow_git_config</code> salvará suas informações de
+nome de usuário e e-mail vinculados à sua conta do GitHub. Isso será
+necessário para permitir que você envie todas as suas alterações em seu
+projeto. <em>Esta configuração só será necessária uma vez por
+computador.</em></p>
+<p><br> Então vamos criar a estrutura de diretório
+<code>workflowr</code> com a função <code>wflow_start</code>. <em>você
+já tem um diretório principal para o seu projeto, basta copiá-lo e colar
+aqui.</em></p>
 <pre class="r"><code>wflow_start(directory = &quot;.&quot;,
           name = &quot;YourRepositoryName&quot;,
           git = TRUE,
@@ -880,200 +905,148 @@ if you follow my steps everything will be fine.</em></p>
 <blockquote>
 <p>Obs.:</p>
 <ol style="list-style-type: decimal">
-<li><p>The dot <code>.</code> represents your working directory. It is
-saying to <code>workflowr</code> to create the new folders at your
-working directory, not in a new folder.</p></li>
-<li><p>Use the same <code>name</code> for your project as for your
-GitHub repository.</p></li>
-<li><p><code>git</code> and <code>existing</code> arguments inform for
-<code>workflowr</code> that you will use git as version control and that
-the folder already exists, respectively.</p></li>
+<li><p>O ponto <code>.</code> representa seu diretório de trabalho. Está
+dizendo ao <code>workflowr</code> para criar as novas pastas em seu
+diretório de trabalho, não em uma nova pasta.</p></li>
+<li><p>Use o mesmo <code>name</code> para seu projeto e para seu
+repositório GitHub.</p></li>
+<li><p>Os argumentos <code>git</code> e <code>existing</code> informam
+para o <code>workflowr</code> que você usará o git como controle de
+versão e que a pasta já existe, respectivamente.</p></li>
 </ol>
 </blockquote>
 <p><br></p>
-<p><code>wflow_start</code> will provide the following template of sub
-directories:</p>
-<pre><code>myproject/
+<p><code>wflow_start</code> fornecerá o seguinte modelo de
+subdiretórios:</p>
+<pre><code>meu projeto/
 |-- .gitignore
 |-- .Rprofile
 |-- _workflowr.yml
-|-- analysis/ # This is the most important folder,
-|   |            it will store all the your R markdown
-|   |            files with your analysis of this project
-|   |-- about.Rmd
-|   |-- index.Rmd # This Rmd file will generate the homepage of your
-|   |               website. Here you could write more about the 
-|   |               project and link it to the your Rmd files with
-|   |               your analysis
-|   |-- license.Rmd
-|   \-- _site.yml # This file is the does all the magic of your website
-|                   layout, theme, navigation bar, ...
-|-- code/ # This folder you should store all the code that you think
-|   |       that might not be appropriate to include at your Rmd files
-|   |       or that&#39;s functions that you created that you will just call
-|   |       for the analysis using a source function.
-|   \-- README.md
-|-- data/ # Here you will add all your raw data files.
-|   \-- README.md
-|-- docs/ # This folder will save all the html pages created from your Rmd
-|           files, SHOULD NOT BE EDITED BY THE USER
-|-- myproject.Rproj
-|-- output/ # Here you will save all the output from your analysis,
-|   |         like data, results, figures,...
-|   |         Even pre-process data files should be saved here.
-|   \-- README.md
+|-- analysis/ # Esta é a pasta mais importante,
+| | ele armazenará todo o seu markdown R e
+| | arquivos com sua análise deste projeto
+| |-- about.Rmd
+| |-- index.Rmd # Este arquivo Rmd irá gerar a página inicial do seu
+| | local na rede Internet. Aqui você pode escrever mais sobre o
+| | projeto e vinculá-lo aos seus arquivos Rmd com
+| | sua análise
+| |-- license.Rmd
+| \-- _site.yml # Este arquivo é o que faz toda a mágica do seu site
+| layout, tema, barra de navegação, ...
+|-- code/ # Nesta pasta você deve armazenar todo o código que achar
+| | que pode não ser apropriado para incluir em seus arquivos Rmd
+| | ou são funções que você criou que você apenas chamará
+| | para a análise usando uma função de origem.
+| \-- README.md
+|-- data/ # Aqui você adicionará todos os seus arquivos de dados brutos.
+| \-- README.md
+|-- docs/ # Esta pasta irá salvar todas as páginas html criadas a partir do seu Rmd
+| arquivos, NÃO DEVEM SER EDITADOS PELO USUÁRIO
+|-- meuprojeto.Rproj
+|-- output/ # Aqui você salvará toda a saída da sua análise,
+| | como dados, resultados, números,...
+| | Mesmo os arquivos de dados de pré-processamento devem ser salvos aqui.
+| \-- README.md
 |-- README.md</code></pre>
 <p><br></p>
-<p><code>workflowr</code> also provide an template format for your Rmd
-files that could be used to create yours GitHub pages websites like this
-one!!!<br />
-<img src="images/IndexTemplate.png" style="width:100.0%" /></p>
+<p><code>workflowr</code> também fornece um formato de modelo para seus
+arquivos Rmd que podem ser usados para criar seus sites de páginas do
+GitHub como este!!!</p>
+<p><img src="images/IndexTemplate.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>You can look more ideas of how to customize the theme and layout of
-your project website <a
-href="https://workflowr.github.io/workflowr/articles/wflow-02-customization.html">here</a>.</p>
+<p>Você pode ver mais ideias de como personalizar o tema e o layout do
+site do seu projeto <a
+href="https://workflowr.github.io/workflowr/articles/wflow-02-customization.html">aqui</a>.</p>
 <p><br></p>
 </div>
 </div>
-<div id="tidyverse-functions" class="section level2">
-<h2>Tidyverse functions</h2>
-<p>There are <em>lots</em> of great resources online for learning the
-basic <code>tidyverse</code> functions. <a
-href="https://www.rstudio.com/resources/cheatsheets/">Here</a> you will
-find a lot of cheat sheets of the wonderful world of tidyverse and so
-much more.</p>
+<div id="funções-do-tidyverse" class="section level2">
+<h2>Funções do Tidyverse</h2>
+<p>Existem <em>muitos</em> ótimos recursos online para aprender as
+funções básicas do <code>tidyverse</code>. <a
+href="https://www.rstudio.com/resources/cheatsheets/">Aqui</a> você
+encontrará muitas dicas do maravilhoso mundo do <code>tidyverse</code> e
+muito mais.</p>
 <div id="code-chunks" class="section level3">
 <h3>Code chunks</h3>
-<p>At the R markdown files your R code must be inside a
-<code>code chunks</code> for RStudio to understand as so. So What is a
-code chunk?</p>
+<p>Nos arquivos R markdown, seu código R deve estar dentro de um
+<code>code chunks</code> para que o RStudio entenda como tal. Então, o
+que é um pedaço de código?</p>
 <blockquote>
-<pre><code>Here&#39;s one
+<pre><code>aqui está um
 
 ```r
 dim(iris)</code></pre>
 <pre><code>[1] 150   5</code></pre>
 <p>```</p>
 </blockquote>
-<p>but you could also use that in the middle of any phrase as
-<code>2 + 2</code> is 4, all you need to do is to write your code
-surrounded by a pair of back-ticks and the letter <code>r</code> like
-this.</p>
-<pre class="r"><code># Two plus two equals `r 2 + 2`</code></pre>
-<p>R markdown allows you to create chunks for several programming
-languages, like python. In your RStudio there is a <code>+c</code>
-button at the menu below your Rmd file name, try it to see which other
-type of languages you could apply at a Rmd file.</p>
-</div>
-<div id="hotkeys" class="section level3">
-<h3>Hotkeys</h3>
-<p>Pretty critical to learn a few of these, especially these:</p>
-<table>
-<colgroup>
-<col width="32%" />
-<col width="32%" />
-<col width="35%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center"><strong>OS X - MAC</strong></th>
-<th align="center"><strong>Windows</strong></th>
-<th align="center">Hotkey</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><code>CMD</code> + <code>Option</code> +
-<code>I</code></td>
-<td align="center"><code>Ctrl</code> + <code>Alt</code> +
-<code>I</code></td>
-<td align="center">create chunk</td>
-</tr>
-<tr class="even">
-<td align="center"><code>Shift</code> + <code>CMD</code> +
-<code>M</code></td>
-<td align="center"><code>Shift</code> + <code>Ctrl</code> +
-<code>M</code></td>
-<td align="center"><code>%&gt;%</code> pipe operator</td>
-</tr>
-<tr class="odd">
-<td align="center"><code>Option</code> + <code>-</code></td>
-<td align="center"><code>Alt</code> + <code>-</code></td>
-<td align="center"><code>&lt;-</code> assignment operator</td>
-</tr>
-<tr class="even">
-<td align="center"><code>CMD</code> + <code>Enter</code></td>
-<td align="center"><code>Windows</code> + <code>Enter</code></td>
-<td align="center">submit (run) lines of code in your Rmd or R script to
-the console.</td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-<p><code>magrittr</code> package has several operators very useful for
-managing data.</p>
+<p>mas você também pode usar isso no meio de qualquer frase como
+<code>2 + 2</code> é 4, tudo que você precisa fazer é escrever seu
+código cercado por um par de aspas simples e a letra <code>r</code>
+assim.</p>
+<pre class="r"><code># Dois mais dois é igual a `r 2 + 2`</code></pre>
+<p>R markdown permite que você crie <code>chuncks</code> para várias
+linguagens de programação, como python, c++…</p>
+<p>No seu RStudio existe um botão <code>+c</code> no menu abaixo do nome
+do seu arquivo Rmd, experimente para ver que outro tipo de linguagem
+você pode aplicar em um arquivo Rmd.</p>
 <p><br></p>
 </div>
 </div>
-<div id="using-rmarkdown" class="section level2">
-<h2>Using Rmarkdown</h2>
-<p>Here is some guides to improve your Rmd writing. You can use headers,
-give emphasis, create tables, call a figure, add links of useful
-websites.</p>
+<div id="usando-rmarkdown" class="section level2">
+<h2>Usando Rmarkdown</h2>
+<p>Aqui estão alguns guias para melhorar sua escrita Rmd. Você pode usar
+cabeçalhos, dar ênfase, criar tabelas, chamar uma figura, adicionar
+links de sites úteis.</p>
 <ul>
-<li><a href="https://www.markdownguide.org/basic-syntax/">Markdown Basic
-Syntax</a><br />
-</li>
+<li><a href="https://www.markdownguide.org/basic-syntax/">Sintaxe básica
+do Markdown</a></li>
 <li><a
-href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.257912457.388466084.1647312703-2093965637.1647091994">R
-Markdown Reference Guide</a> - From RStudio.</li>
+href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.257912457.388466084.1647312703-2093965637.1647091994">Guia
+de referência R Markdown</a> - do RStudio.</li>
 </ul>
 <p><br></p>
 </div>
-<div id="using-workflowr" class="section level2">
-<h2>Using <code>workflowr</code></h2>
-<p>We will open the <code>index.Rmd</code> file using
-<code>wflow_open</code> function</p>
-<pre class="r"><code>wflow_open(&quot;analysis/index.Rmd&quot;)</code></pre>
+<div id="usando-workflowr" class="section level2">
+<h2>Usando <code>workflowr</code></h2>
+<p>Vamos abrir o arquivo <code>index.Rmd</code> usando a função
+<code>wflow_open</code></p>
+<pre class="r"><code>wflow_open(&quot;analise/index.Rmd&quot;)</code></pre>
 <p><br></p>
-<p>At this file you can update the title of the index page, and start
-writing the main objectives of this repository. Like:</p>
-<pre><code>This repository was created to assist my learning experience with GitHub and workflowr.
+<p>Neste arquivo você pode atualizar o título da página de índice e
+começar a escrever os principais objetivos deste repositório. Como:</p>
+<pre><code>Este repositório foi criado para auxiliar minha experiência de aprendizado com GitHub e workflowr.
 
-My first R code at this project will be at this [git hub page](PCA.html)</code></pre>
+Meu primeiro código R neste projeto será nesta [página do hub do git](PCA.html)</code></pre>
 <p><br></p>
-<p>That’s great, but we still do not have the <code>PCA.hmtl</code>
-file, so let’s create it with the <code>wflow_open</code> function.</p>
-<pre class="r"><code>wflow_open(&quot;analysis/PCA.Rmd&quot;)</code></pre>
-<p>That should create the PCA.Rmd file, you should be looking for it
-now.<br />
-<img src="images/PCARmd.png" style="width:100.0%" /></p>
+<p>Isso é ótimo, mas ainda não temos o arquivo <code>PCA.hmtl</code>,
+então vamos criá-lo com a função <code>wflow_open</code>.</p>
+<pre class="r"><code>wflow_open(&quot;análise/PCA.Rmd&quot;)</code></pre>
+<p>Isso deve criar o arquivo PCA.Rmd, você deve estar procurando por ele
+agora. <img src="images/PCARmd.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>You can update the name to replacing the abbreviation for
-<code>Principal Components Analysis</code>, and add a new intro for the
-analysis that we are going to do at this R markdown file.</p>
-<p>You can follow the example of this website <a
+<p>Você pode atualizar o nome para substituir a abreviação de
+<code>Análise de Componentes Principais</code> e adicionar uma nova
+introdução para a análise que faremos neste arquivo R markdown.</p>
+<p>Você pode seguir o exemplo deste site <a
 href="https://lucianorogerio.github.io/WorkFlowRExample/">WorkFlowRExample</a>.</p>
 <p><br></p>
-<p>As we already have some changes at our project, we can update our
-repository in GitHub running the <code>wflow_status</code> and
+<p>Como já temos algumas mudanças em nosso projeto, podemos atualizar
+nosso repositório no GitHub rodando o <code>wflow_status</code> e o
 <code>wflow_publish</code>.</p>
 <ul>
-<li><p><code>wflow_status</code> will check if there is any changes at
-the files of the <code>analysis</code> folder that requires to create
-the html pages again, and verify any new/delete/modified files at your
-repository. Always comparing with the last version (commit).</p></li>
-<li><p><code>wflow_publish</code> will commit (save, take a snapshot)
-the changes at the Rmd files at the <code>analysis</code> folder. Then
-create or update the html files and figures, and commit these new html
-files and figures again.</p></li>
+<li><p><code>wflow_status</code> verificará se há alguma alteração nos
+arquivos da pasta <code>analysis</code> que requer a criação das páginas
+html novamente, e verificará quaisquer arquivos
+novos/excluídos/modificados em seu repositório. Sempre comparando com a
+última versão (commit).</p></li>
+<li><p><code>wflow_publish</code> irá confirmar (salvar, tirar um
+snpashot) as mudanças nos arquivos Rmd na pasta <code>analysis</code>.
+Em seguida, crie ou atualize os arquivos e figuras html e confirme esses
+novos arquivos e figuras html novamente.</p></li>
 </ul>
 <pre class="r"><code>wflow_status()</code></pre>
-<p>You should see something like this.</p>
+<p>Você deve ver algo assim.</p>
 <pre><code>Status of 4 Rmd files
 
 Totals:
@@ -1097,11 +1070,11 @@ The current Git status is:
  untracked untracked                Data_Crosses_Density_chart.txt
  untracked untracked                   Parentais selecionados.xlsx</code></pre>
 <p><br></p>
-<p>To publish your html website using <code>wflow_publish</code> you
-will need to provide a small message that will be linked to the
-<code>git commit</code> function.</p>
-<pre class="r"><code>wflow_publish(files = &quot;analysis/*.Rmd&quot;, message = &quot;Test&quot;)</code></pre>
-<pre><code>Current working directory: /Users/lbd54/Documents/GitHub/CassavaReproductiveBarriers
+<p>Para publicar seu site html usando <code>wflow_publish</code> você
+precisará fornecer uma pequena mensagem que será vinculada à função
+<code>git commit</code>.</p>
+<pre class="r"><code>wflow_publish(files = &quot;analise/*.Rmd&quot;, mensagem = &quot;Test&quot;)</code></pre>
+<pre><code>Current working directory: /Users/USUARIO/Documents/GitHub/GitHub-with-RStudio-LICAE
 Building 3 file(s):
 Building analysis/about.Rmd
 log directory created: /var/folders/33/g0c9br3d0rx_bvhf9jsc0t9mcdw1j5/T//RtmphiTKma/workflowr
@@ -1143,105 +1116,108 @@ docs/about.html
 docs/index.html
 docs/license.html</code></pre>
 <p><br></p>
-<p>However, I prefer to create/update the html files using the Knit
-button, then commit myself. This strategy reduces the number of commits
-in your repository, which makes easier to find an older version of it.
-Also the Knit button allows you to see if your website has the
-configuration that you expected without requiring to commit each time
-you recreate your website.</p>
-<p>You can ask for <code>RStudio</code> to create your html website
-pressing the button <code>knit</code>, as showed below.</p>
+<p>No entanto, prefiro criar/atualizar os arquivos html usando o botão
+<code>Knit</code> e submeeter. Essa estratégia reduz o número de commits
+em seu repositório, o que facilita encontrar uma versão mais antiga
+dele. Além disso, o botão <code>Knit</code> permite que você veja se seu
+site tem a configuração que você esperava sem precisar confirmar cada
+vez que você recriar seu site.</p>
+<p>Você pode pedir ao <code>RStudio</code> para criar seu site html
+pressionando o botão <code>knit</code>, conforme mostrado abaixo.</p>
 <p><img src="images/KnitRmdFile.png" style="width:100.0%" /></p>
 <p><br></p>
-<p><code>RStudio</code> will create/update your html file and save it at
-the <code>docs</code> folder. After you repeat this step for all your
-Rmd files and checking if all of them are as you expected, you can
-commit this changes to GitHub. See next section.</p>
+<p>O <code>RStudio</code> criará/atualizará seu arquivo html e o salvará
+na pasta <code>docs</code>. Depois de repetir esta etapa para todos os
+seus arquivos Rmd e verificar se todos estão conforme o esperado, você
+pode confirmar essas alterações no GitHub. Veja a próxima seção.</p>
 <p><br></p>
 </div>
-<div id="using-git-to-save-your-updates-at-github"
+<div id="usando-o-git-para-salvar-suas-atualizações-no-github"
 class="section level2">
-<h2>Using Git to save your updates at GitHub</h2>
-<p>Git has four main functions:</p>
+<h2>Usando o Git para salvar suas atualizações no GitHub</h2>
+<p>O Git tem quatro funções principais:</p>
 <ul>
-<li>clone: will copy your repository for an specific directory on your
-computer.<br />
-</li>
-<li>pull: will update the cloned repository of your computer with the
-new updates in your GitHub repository.<br />
-</li>
-<li>commit: will save a version of your repository with your new codes,
-files, outputs. <em>But that will not send it to GitHub</em>.<br />
-</li>
-<li>push: will send to git hub all your new commits/updates in project.
-After pushing your repository to GitHub you can share or clone your
-updates in any computer.</li>
+<li>clone: irá copiar seu repositório para um diretório específico em
+seu computador.</li>
+<li>pull: irá atualizar o repositório clonado do seu computador com as
+novas atualizações no seu repositório GitHub.</li>
+<li>commit: irá salvar uma versão do seu repositório com seus novos
+códigos, arquivos, saídas. <em>Mas isso não o enviará para o
+GitHub</em>.</li>
+<li>push: enviará para o git hub todos os seus novos
+commits/atualizações no projeto. Depois de enviar seu repositório para o
+GitHub, você pode compartilhar ou clonar suas atualizações em qualquer
+computador.</li>
 </ul>
-<p>For a good commiting practice, just commit your updates after you
-finish your work or part of the project, so you will reduce the number
-of commits in your project.</p>
-<div id="git-in-rstudio" class="section level3">
-<h3>Git in RStudio</h3>
-<p>Git has it own menu to make easier the interaction between GitHub and
-RStudio. <img src="images/GitRStudio.png" style="width:100.0%" /></p>
+<p>Para uma boa prática de commit, apenas comite suas atualizações
+depois de terminar seu trabalho ou parte do projeto, assim você reduzirá
+o número de commits em seu projeto.</p>
+<div id="git-no-rstudio" class="section level3">
+<h3>Git no RStudio</h3>
+<p>O Git possui um menu próprio para facilitar a interação entre o
+GitHub e o RStudio.</p>
+<p><img src="images/GitRStudio.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>To commit your updates just click at the commit button at this menu.
-This will open a window called <code>Rstudio: Review Changes</code>.
-<img src="images/RStudioReview.png" style="width:100.0%" /></p>
+<p>Para confirmar suas atualizações, basta clicar no botão confirmar
+neste menu. Isso abrirá uma janela chamada
+<code>Rstudio: Review Changes</code>.</p>
+<p><img src="images/RStudioReview.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>At this window, you will be allowed to <code>stage</code> (confirm)
-the changes that you made in all the files. You can make this decision
-per chunk, you just have to decide if you <code>stage chunk</code> (keep
-the changes) or <code>discard chunk</code> (keep the file as it was at
-the last commit).</p>
+<p>Nesta janela, você terá permissão para <code>stage</code> (confirmar)
+as alterações que você fez em todos os arquivos. Você pode tomar esta
+decisão por chunk, você só tem que decidir se você
+<code>stage chunk</code> (manter as alterações) ou
+<code>discard chunk</code> (manter o arquivo como estava no último
+commit).</p>
 <blockquote>
-<p><em>DO NOT FORGET TO WRITE A SHORT MEANINGFUL MESSAGE ABOUT THE NEW
-CHANGES FOR THIS COMMIT</em>.</p>
+<p><em>NÃO SE ESQUEÇA DE ESCREVER UMA BREVE MENSAGEM SIGNIFICATIVA SOBRE
+AS NOVAS MUDANÇAS PARA ESTE COMMIT</em>.</p>
 </blockquote>
-<p>Just click <code>commit</code> and then push your new commit to
-GitHub clicking at the <code>green arrow</code>. If it is your first
-time push a commit to GitHub in your computer, RStudio will ask you your
-<code>GitHub user</code> and a <code>password</code>, the password you
-should provide is a <code>personal access token</code>. This <a
+<p>Basta clicar em <code>commit</code> e, em seguida, enviar seu novo
+commit para o GitHub clicando na seta verde (<code>Push</code>). Se for
+a primeira vez que você envia um commit para o GitHub em seu computador,
+o RStudio pedirá seu <code>usuário do GitHub</code> e uma
+<code>senha</code>, a senha que você deve fornecer é um
+<code>token de acesso pessoal</code>. Este <a
 href="https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html">link</a>
-will provide what you need to do to generate one.</p>
+fornecerá o que você precisa fazer para gerar um.</p>
 <blockquote>
-<p><em>Remember to save this token in a safe place, it might be used
-another time</em>.</p>
+<p><em>Lembre-se de guardar este token em um lugar seguro, ele pode ser
+usado em outra ocasião</em>.</p>
 </blockquote>
 <p><br></p>
 </div>
 </div>
-<div id="publishing-on-github-pages" class="section level2">
-<h2>Publishing on GitHub (Pages)</h2>
-<p>Ok, your project is already at the GitHub, but now we need to give
-instructions to build your website to GitHub, so let’s go to your GitHub
-repository. <a href="https://github.com/">GitHub link</a></p>
-<p>At your repository website, click in <code>settings</code> <img
-src="images/GitPage1.png" style="width:100.0%" /></p>
+<div id="publicando-no-github-páginas" class="section level2">
+<h2>Publicando no GitHub (Páginas)</h2>
+<p>Ok, seu projeto já está no GitHub, mas agora precisamos dar
+instruções para construir seu site no GitHub, então vamos ao seu
+repositório GitHub. <a href="https://github.com/">Link do GitHub</a></p>
+<p>No site do seu repositório, clique em <code>settings</code></p>
+<p><img src="images/GitPage1.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>Then select the <code>Pages</code> section at the sidebar menu <img
-src="images/GitPage2.png" style="width:100.0%" /></p>
+<p>Em seguida, selecione a seção <code>Pages</code> no menu da barra
+lateral <img src="images/GitPage2.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>You will see a section about <code>Source</code>, GitHub need to know
-which branch and which folder inside this branch is yours html files. So
-click at the <code>None</code> button and select
-<code>Branch: main</code>, then at the new windows with a folder symbol
-select <code>/docs</code> folder, and save.</p>
+<p>Você verá uma seção sobre <code>Source</code>, o GitHub precisa saber
+qual branch e qual pasta dentro deste branch estão seus arquivos html.
+Então clique no botão <code>None</code> e selecione
+<code>Branch: main</code>, então nas novas janelas com um símbolo de
+pasta selecione a pasta <code>/docs</code> e salve.</p>
 <p><img src="images/GitPage3.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>Congratulations your website will be created, just wait some minutes.
-The link will appear in a window similar to this one.</p>
-<pre><code>®   Your site is ready to be published at
+<p>Parabéns seu site será criado, aguarde alguns minutos. O link
+aparecerá em uma janela semelhante a esta.</p>
+<pre><code>® Seu site está pronto para ser publicado em
 https://YourUserName.github.io/YourRepositoryName/</code></pre>
-<p>Copy this link, and get back to your repository website clicking at
-your repository name.</p>
+<p>Copie este link e volte ao site do seu repositório clicando no nome
+do seu repositório.</p>
 <pre><code>UserName/RepositoryName</code></pre>
-<p>at the right side of the page will have a section called about with a
-<code>gear</code>, click at the <code>gear</code> and paste your website
-link at the window <code>Website</code>, and save the changes. Now
-everyone that have access to your repository could see your project
-website just clicking at the link provided at the about section.</p>
+<p>no lado direito da página terá uma seção chamada about com uma
+<code>engrenagem</code>, clique na <code>engrenagem</code> e cole o link
+do seu site na janela <code>Website</code>, e salve as alterações.</p>
+<p>Agora, todos que têm acesso ao seu repositório podem ver o site do
+seu projeto apenas clicando no link fornecido na seção sobre.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">

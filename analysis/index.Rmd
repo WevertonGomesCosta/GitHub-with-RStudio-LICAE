@@ -13,62 +13,67 @@ editor_options:
 github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 ---
 
-# Create a project {#create_project}
+# Crie um projeto {#create_project}
 
-## Create a GitHub repository
+## Crie um repositório GitHub
 
-To avoid any conflict between RStudio and GitHub let's create your repository first at GitHub.  
+Para evitar qualquer conflito entre o RStudio e o GitHub, vamos criar seu repositório primeiro no GitHub.
 
-Go to your [GitHub page](https://github.com/new) to create a new repository.
+Acesse sua [página do GitHub](https://github.com/new) para criar um novo repositório.
 
 ![](images/GitHubNewRepo.png){width="100%"}
 
 <br>
 
-Add a creative name and a description to your repository, please leave as a public option, that will allow you to create a GitHub page to share your work with all of us.  
+Adicione um nome criativo e uma descrição ao seu repositório, deixe como opção pública, que permitirá que você crie uma página no GitHub para compartilhar seu trabalho com todos nós.
 
-After that we are going to copy the `https link` of your repository to clone it with RStudio. Just click at the red button.
+Depois disso vamos copiar o `https::/link` do seu repositório para cloná-lo com o RStudio. Basta clicar no botão vermelho.
 
 ![](images/HttpsLink2CloneGHRepo.png){width="100%"}
 
 <br>
 
-Then let's move to RStudio.
+Então vamos para o RStudio.
 
-To clone (Download) your repository from GitHub, click at the `Project` button on the top right of RStudio `(1˚)` then at `New Project...`.  
+Para clonar (Baixar) seu repositório do GitHub, clique no botão `Project` no canto superior direito do RStudio e depois em `New Project...`.
+
 ![](images/CloneRepo1.png){width="100%"}
 
 <br>
 
-A window named `New Project Wizard` will appear, select `Version Control`, then `Git`.  
+Uma janela chamada `New Project Wizard` aparecerá, selecione `Version Control`, e depois `Git`.
+
 ![](images/CloneRepo2.png){width="100%"}
 
 <br>
 
-This will open a window with the `Clone Git Repository`. Here you will just paste that link that I asked you to copy long time ago at the `Repository URL:` window. At the `Create project as subdirectory of:` select a directory of easy access for you, that will make it easier for you to locate it later.  
+Isso abrirá uma janela com o `Clone Git Repository`. Aqui você vai apenas colar aquele link que eu pedi para você copiar há muito tempo na janela `Repository URL:`. Em `Criar projeto como subdiretório de:` selecione um diretório de fácil acesso para você, que facilitará sua localização posteriormente.
 
-*I suggest you to create a folder at your `Documents` to keep your `workflowr` projects organized.*  
+*Eu sugiro que você crie uma pasta em seus `Documents` para manter seus projetos `workflow` organizados.*
+
 ![](images/CloneRepo3.png){width="100%"}
 
 <br>
 <br>
 
-## Create a `workflowr` project
+## Crie um projeto `workflow`
 
-`workflowr` package helps you to organize an analysis aiming to improve the project management, reproducibility, and team work. It works with the version control software git. Git is another incredible software that works as an version control, saving all the changes at your project that you make during the way, allowing to easily get back to older versions or track your changes or bugs.  
+O pacote `workflowr` ajuda você a organizar uma análise visando melhorar o gerenciamento do projeto, a reprodutibilidade e o trabalho em equipe. Funciona com o software de controle de versão git. O Git é outro software incrível que funciona como um controle de versão, salvando todas as alterações em seu projeto que você faz durante o caminho, permitindo voltar facilmente para versões mais antigas ou rastrear suas alterações ou bugs.
 
-So let's start installing the `workflowr` package  
-```{r Install workflowR, eval = FALSE}
+Então vamos começar a instalar o pacote `workflowr`
+
+```{r Instalar workflowr, eval = FALSE}
 install.packages("workflowr")
 ```
 
 <br>
 
-### Starting your workflowr project
+### Iniciando seu projeto de workflow
 
-Let's start reading the `workflowr` package, and then running its function  
-```{r Configure GitHub, eval=FALSE}
-library(workflowr)
+Vamos começar a ler o pacote `workflowr`, e então executar sua função
+
+```{r Configurar GitHub, eval=FALSE}
+biblioteca (workflowr)
 
 wflow_git_config(user.name = "YourGitHubUserName", user.email = "YourGitHubEmail")
 
@@ -76,176 +81,162 @@ wflow_git_config(user.name = "YourGitHubUserName", user.email = "YourGitHubEmail
 
 <br>
 
-`wflow_git_config` function will save the yours information of username and email linked to your GitHub account. That will be required to allow you to push all your changes at your project. *This configuration will only be necessary once per computer.*
+A função `wflow_git_config` salvará suas informações de nome de usuário e e-mail vinculados à sua conta do GitHub. Isso será necessário para permitir que você envie todas as suas alterações em seu projeto. *Esta configuração só será necessária uma vez por computador.*
 
 <br>
-Then we are going to create the `workflowr` directory structure with the `wflow_start` function. *Just pay attention that you already have a main directory for your project, but if you follow my steps everything will be fine.*
+Então vamos criar a estrutura de diretório `workflowr` com a função `wflow_start`. *você já tem um diretório principal para o seu projeto, basta copiá-lo e colar aqui.*
 
-```{r Start the project, eval = FALSE}
+```{r Iniciar o projeto, eval = FALSE}
 wflow_start(directory = ".",
           name = "YourRepositoryName",
           git = TRUE,
           existing = TRUE)
 ```
-<br>
-
->Obs.:  
->
->1.  The dot `.` represents your working directory. It is saying to `workflowr` to create the new folders at your working directory, not in a new folder.  
->
->2.  Use the same `name` for your project as for your GitHub repository.  
->
->3.  `git` and `existing` arguments inform for `workflowr` that you will use git as version control and that the folder already exists, respectively.
 
 <br>
 
-`wflow_start` will provide the following template of sub directories:  
+>Obs.:
+>
+>1. O ponto `.` representa seu diretório de trabalho. Está dizendo ao `workflowr` para criar as novas pastas em seu diretório de trabalho, não em uma nova pasta.
+>
+>2. Use o mesmo `name` para seu projeto e para seu repositório GitHub.
+>
+>3. Os argumentos `git` e `existing` informam para o `workflowr` que você usará o git como controle de versão e que a pasta já existe, respectivamente.
+
+<br>
+
+`wflow_start` fornecerá o seguinte modelo de subdiretórios:
 ```
-myproject/
+meu projeto/
 |-- .gitignore
 |-- .Rprofile
 |-- _workflowr.yml
-|-- analysis/ # This is the most important folder,
-|   |            it will store all the your R markdown
-|   |            files with your analysis of this project
-|   |-- about.Rmd
-|   |-- index.Rmd # This Rmd file will generate the homepage of your
-|   |               website. Here you could write more about the 
-|   |               project and link it to the your Rmd files with
-|   |               your analysis
-|   |-- license.Rmd
-|   \-- _site.yml # This file is the does all the magic of your website
-|                   layout, theme, navigation bar, ...
-|-- code/ # This folder you should store all the code that you think
-|   |       that might not be appropriate to include at your Rmd files
-|   |       or that's functions that you created that you will just call
-|   |       for the analysis using a source function.
-|   \-- README.md
-|-- data/ # Here you will add all your raw data files.
-|   \-- README.md
-|-- docs/ # This folder will save all the html pages created from your Rmd
-|           files, SHOULD NOT BE EDITED BY THE USER
-|-- myproject.Rproj
-|-- output/ # Here you will save all the output from your analysis,
-|   |         like data, results, figures,...
-|   |         Even pre-process data files should be saved here.
-|   \-- README.md
+|-- analysis/ # Esta é a pasta mais importante,
+| | ele armazenará todo o seu markdown R e
+| | arquivos com sua análise deste projeto
+| |-- about.Rmd
+| |-- index.Rmd # Este arquivo Rmd irá gerar a página inicial do seu
+| | local na rede Internet. Aqui você pode escrever mais sobre o
+| | projeto e vinculá-lo aos seus arquivos Rmd com
+| | sua análise
+| |-- license.Rmd
+| \-- _site.yml # Este arquivo é o que faz toda a mágica do seu site
+| layout, tema, barra de navegação, ...
+|-- code/ # Nesta pasta você deve armazenar todo o código que achar
+| | que pode não ser apropriado para incluir em seus arquivos Rmd
+| | ou são funções que você criou que você apenas chamará
+| | para a análise usando uma função de origem.
+| \-- README.md
+|-- data/ # Aqui você adicionará todos os seus arquivos de dados brutos.
+| \-- README.md
+|-- docs/ # Esta pasta irá salvar todas as páginas html criadas a partir do seu Rmd
+| arquivos, NÃO DEVEM SER EDITADOS PELO USUÁRIO
+|-- meuprojeto.Rproj
+|-- output/ # Aqui você salvará toda a saída da sua análise,
+| | como dados, resultados, números,...
+| | Mesmo os arquivos de dados de pré-processamento devem ser salvos aqui.
+| \-- README.md
 |-- README.md
 ```
+<br>
+
+`workflowr` também fornece um formato de modelo para seus arquivos Rmd que podem ser usados para criar seus sites de páginas do GitHub como este!!!
+
+![](images/IndexTemplate.png){width="100%"}
 
 <br>
 
-`workflowr` also provide an template format for your Rmd files that could be used to create yours GitHub pages websites like this one!!!  
-![](images/IndexTemplate.png){width="100%"} 
+Você pode ver mais ideias de como personalizar o tema e o layout do site do seu projeto [aqui](https://workflowr.github.io/workflowr/articles/wflow-02-customization.html).
 
 <br>
 
-You can look more ideas of how to customize the theme and layout of your project website [here](https://workflowr.github.io/workflowr/articles/wflow-02-customization.html).  
+## Funções do Tidyverse
 
-<br>
-
-## Tidyverse functions
-
-There are *lots* of great resources online for learning the basic `tidyverse` functions.
-[Here](https://www.rstudio.com/resources/cheatsheets/) you will find a lot of cheat sheets of the wonderful world of tidyverse and so much more.  
+Existem *muitos* ótimos recursos online para aprender as funções básicas do `tidyverse`.
+[Aqui](https://www.rstudio.com/resources/cheatsheets/) você encontrará muitas dicas do maravilhoso mundo do `tidyverse` e muito mais.
 
 ### Code chunks
 
-At the R markdown files your R code must be inside a `code chunks` for RStudio to understand as so.
-So What is a code chunk?  
+Nos arquivos R markdown, seu código R deve estar dentro de um `code chunks` para que o RStudio entenda como tal.
+Então, o que é um pedaço de código?
 
 >```
->Here's one
+>aqui está um
 >```{r}
 >dim(iris)
 >```
 >```
 
-but you could also use that in the middle of any phrase as `2 + 2` is `r 2 + 2`, all you need to do is to write your code surrounded by a pair of back-ticks and the letter `r` like this.
+mas você também pode usar isso no meio de qualquer frase como `2 + 2` é `r 2 + 2`, tudo que você precisa fazer é escrever seu código cercado por um par de aspas simples e a letra `r` assim.
 
-```{r Chunk example}
-# Two plus two equals `r 2 + 2`
+```{r exemplo de pedaço}
+# Dois mais dois é igual a `r 2 + 2`
 ```
 
-R markdown allows you to create chunks for several programming languages, like python.
-In your RStudio there is a `+c` button at the menu below your Rmd file name, try it to see which other type of languages you could apply at a Rmd file.
+R markdown permite que você crie `chuncks` para várias linguagens de programação, como python, c++...
 
-### Hotkeys
-
-Pretty critical to learn a few of these, especially these:
-
-
-|     **OS X - MAC**     |      **Windows**       |          Hotkey          |
-| :--------------------: | :--------------------: | :----------------------: |
-| `CMD` + `Option` + `I` | `Ctrl` + `Alt` + `I`   | create chunk             |
-| `Shift` + `CMD` + `M`  | `Shift` + `Ctrl` + `M` | `%>%` pipe operator      |
-| `Option` + `-`         | `Alt` + `-`            | `<-` assignment operator |
-| `CMD` + `Enter`        | `Windows` + `Enter`    | submit (run) lines of code in your Rmd or R script to the console. |
-|                        |                        |                          |
-
- 
-`magrittr` package has several operators very useful for managing data.
+No seu RStudio existe um botão `+c` no menu abaixo do nome do seu arquivo Rmd, experimente para ver que outro tipo de linguagem você pode aplicar em um arquivo Rmd.
 
 <br>
 
-## Using Rmarkdown
+## Usando Rmarkdown
 
-Here is some guides to improve your Rmd writing.
-You can use headers, give emphasis, create tables, call a figure, add links of useful websites.
+Aqui estão alguns guias para melhorar sua escrita Rmd.
+Você pode usar cabeçalhos, dar ênfase, criar tabelas, chamar uma figura, adicionar links de sites úteis.
 
-* [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)  
-* [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.257912457.388466084.1647312703-2093965637.1647091994) - From RStudio.
+* [Sintaxe básica do Markdown](https://www.markdownguide.org/basic-syntax/)
+* [Guia de referência R Markdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.257912457.388466084.1647312703-2093965637.1647091994) - do RStudio.
 
 <br>
 
-## Using `workflowr`
+## Usando `workflowr`
 
-We will open the `index.Rmd` file using `wflow_open` function
+Vamos abrir o arquivo `index.Rmd` usando a função `wflow_open`
 
-```{r Open an Rmd file, eval = FALSE}
-wflow_open("analysis/index.Rmd")
+```{r Abra um arquivo Rmd, eval = FALSE}
+wflow_open("analise/index.Rmd")
 ```
 
 <br>
 
-At this file you can update the title of the index page, and start writing the main objectives of this repository. Like:
+Neste arquivo você pode atualizar o título da página de índice e começar a escrever os principais objetivos deste repositório. Como:
 
 ```
-This repository was created to assist my learning experience with GitHub and workflowr.
+Este repositório foi criado para auxiliar minha experiência de aprendizado com GitHub e workflowr.
 
-My first R code at this project will be at this [git hub page](PCA.html)
+Meu primeiro código R neste projeto será nesta [página do hub do git](PCA.html)
 ```
 
 <br>
 
-That's great, but we still do not have the `PCA.hmtl` file, so let's create it with the `wflow_open` function.
+Isso é ótimo, mas ainda não temos o arquivo `PCA.hmtl`, então vamos criá-lo com a função `wflow_open`.
 
-```{r Create a new Rmd file, eval = FALSE}
-wflow_open("analysis/PCA.Rmd")
+```{r Cria um novo arquivo Rmd, eval = FALSE}
+wflow_open("análise/PCA.Rmd")
 ```
 
-That should create the PCA.Rmd file, you should be looking for it now.  
+Isso deve criar o arquivo PCA.Rmd, você deve estar procurando por ele agora.
 ![](images/PCARmd.png){width="100%"}
 
 <br>
 
-You can update the name to replacing the abbreviation for `Principal Components Analysis`, and add a new intro for the analysis that we are going to do at this R markdown file.
+Você pode atualizar o nome para substituir a abreviação de `Análise de Componentes Principais` e adicionar uma nova introdução para a análise que faremos neste arquivo R markdown.
 
-You can follow the example of this website [WorkFlowRExample](https://lucianorogerio.github.io/WorkFlowRExample/).  
+Você pode seguir o exemplo deste site [WorkFlowRExample](https://lucianorogerio.github.io/WorkFlowRExample/).
 
 <br>
 
-As we already have some changes at our project, we can update our repository in GitHub running the `wflow_status` and `wflow_publish`.
+Como já temos algumas mudanças em nosso projeto, podemos atualizar nosso repositório no GitHub rodando o `wflow_status` e o `wflow_publish`.
 
-* `wflow_status` will check if there is any changes at the files of the `analysis` folder that requires to create the html pages again, and verify any new/delete/modified files at your repository. Always comparing with the last version (commit).
+* `wflow_status` verificará se há alguma alteração nos arquivos da pasta `analysis` que requer a criação das páginas html novamente, e verificará quaisquer arquivos novos/excluídos/modificados em seu repositório. Sempre comparando com a última versão (commit).
 
-* `wflow_publish` will commit (save, take a snapshot) the changes at the Rmd files at the `analysis` folder. Then create or update the html files and figures, and commit these new html files and figures again.
+* `wflow_publish` irá confirmar (salvar, tirar um snpashot) as mudanças nos arquivos Rmd na pasta `analysis`. Em seguida, crie ou atualize os arquivos e figuras html e confirme esses novos arquivos e figuras html novamente.
 
-```{r Workflow Status, eval = FALSE}
+```{r Status do workflow, eval = FALSE}
 wflow_status()
 ```
 
-You should see something like this.
+Você deve ver algo assim.
 ```
 Status of 4 Rmd files
 
@@ -273,14 +264,14 @@ The current Git status is:
 
 <br>
 
-To publish your html website using `wflow_publish` you will need to provide a small message that will be linked to the `git commit` function.
+Para publicar seu site html usando `wflow_publish` você precisará fornecer uma pequena mensagem que será vinculada à função `git commit`.
 
-```{r WorkFlowR publish, eval = FALSE}
-wflow_publish(files = "analysis/*.Rmd", message = "Test")
+```{r publish WorkFlowR, eval = FALSE}
+wflow_publish(files = "analise/*.Rmd", mensagem = "Test")
 ```
 
 ```
-Current working directory: /Users/lbd54/Documents/GitHub/CassavaReproductiveBarriers
+Current working directory: /Users/USUARIO/Documents/GitHub/GitHub-with-RStudio-LICAE
 Building 3 file(s):
 Building analysis/about.Rmd
 log directory created: /var/folders/33/g0c9br3d0rx_bvhf9jsc0t9mcdw1j5/T//RtmphiTKma/workflowr
@@ -325,84 +316,88 @@ docs/license.html
 
 <br>
 
-However, I prefer to create/update the html files using the Knit button, then commit myself. This strategy reduces the number of commits in your repository, which makes easier to find an older version of it. Also the Knit button allows you to see if your website has the configuration that you expected without requiring to commit each time you recreate your website.
+No entanto, prefiro criar/atualizar os arquivos html usando o botão `Knit` e submeeter. Essa estratégia reduz o número de commits em seu repositório, o que facilita encontrar uma versão mais antiga dele. Além disso, o botão `Knit` permite que você veja se seu site tem a configuração que você esperava sem precisar confirmar cada vez que você recriar seu site.
 
-You can ask for `RStudio` to create your html website pressing the button `knit`, as showed below.
+Você pode pedir ao `RStudio` para criar seu site html pressionando o botão `knit`, conforme mostrado abaixo.
 
 ![](images/KnitRmdFile.png){width="100%"}
 
 <br>
 
-`RStudio` will create/update your html file and save it at the `docs` folder. After you repeat this step for all your Rmd files and checking if all of them are as you expected, you can commit this changes to GitHub. See next section.
+O `RStudio` criará/atualizará seu arquivo html e o salvará na pasta `docs`. Depois de repetir esta etapa para todos os seus arquivos Rmd e verificar se todos estão conforme o esperado, você pode confirmar essas alterações no GitHub. Veja a próxima seção.
 
 <br>
 
-## Using Git to save your updates at GitHub
+## Usando o Git para salvar suas atualizações no GitHub
 
-Git has four main functions:  
+O Git tem quatro funções principais:
 
-* clone: will copy your repository for an specific directory on your computer.  
-* pull: will update the cloned repository of your computer with the new updates in your GitHub repository.  
-* commit: will save a version of your repository with your new codes, files, outputs. *But that will not send it to GitHub*.  
-* push: will send to git hub all your new commits/updates in project. After pushing your repository to GitHub you can share or clone your updates in any computer.
+* clone: irá copiar seu repositório para um diretório específico em seu computador.
+* pull: irá atualizar o repositório clonado do seu computador com as novas atualizações no seu repositório GitHub.
+* commit: irá salvar uma versão do seu repositório com seus novos códigos, arquivos, saídas. *Mas isso não o enviará para o GitHub*.
+* push: enviará para o git hub todos os seus novos commits/atualizações no projeto. Depois de enviar seu repositório para o GitHub, você pode compartilhar ou clonar suas atualizações em qualquer computador.
 
-For a good commiting practice, just commit your updates after you finish your work or part of the project, so you will reduce the number of commits in your project.
+Para uma boa prática de commit, apenas comite suas atualizações depois de terminar seu trabalho ou parte do projeto, assim você reduzirá o número de commits em seu projeto.
 
-### Git in RStudio
+### Git no RStudio
 
-Git has it own menu to make easier the interaction between GitHub and RStudio.
+O Git possui um menu próprio para facilitar a interação entre o GitHub e o RStudio.
+
 ![](images/GitRStudio.png){width="100%"}
 
 <br>
 
-To commit your updates just click at the commit button at this menu. This will open a window called `Rstudio: Review Changes`.
+Para confirmar suas atualizações, basta clicar no botão confirmar neste menu. Isso abrirá uma janela chamada `Rstudio: Review Changes`.
+
 ![](images/RStudioReview.png){width="100%"}
 
 <br>
 
-At this window, you will be allowed to `stage` (confirm) the changes that you made in all the files. You can make this decision per chunk, you just have to decide if you `stage chunk` (keep the changes) or `discard chunk` (keep the file as it was at the last commit).  
+Nesta janela, você terá permissão para `stage` (confirmar) as alterações que você fez em todos os arquivos. Você pode tomar esta decisão por chunk, você só tem que decidir se você `stage chunk` (manter as alterações) ou `discard chunk` (manter o arquivo como estava no último commit).
 
->*DO NOT FORGET TO WRITE A SHORT MEANINGFUL MESSAGE ABOUT THE NEW CHANGES FOR THIS COMMIT*.  
+>*NÃO SE ESQUEÇA DE ESCREVER UMA BREVE MENSAGEM SIGNIFICATIVA SOBRE AS NOVAS MUDANÇAS PARA ESTE COMMIT*.
 
-Just click `commit` and then push your new commit to GitHub clicking at the `green arrow`.
-If it is your first time push a commit to GitHub in your computer, RStudio will ask you your `GitHub user` and a `password`, the password you should provide is a `personal access token`. This [link](https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html) will provide what you need to do to generate one.  
+Basta clicar em `commit` e, em seguida, enviar seu novo commit para o GitHub clicando na seta verde (`Push`).
+Se for a primeira vez que você envia um commit para o GitHub em seu computador, o RStudio pedirá seu `usuário do GitHub` e uma `senha`, a senha que você deve fornecer é um `token de acesso pessoal`. Este [link](https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html) fornecerá o que você precisa fazer para gerar um.
 
->*Remember to save this token in a safe place, it might be used another time*.
+>*Lembre-se de guardar este token em um lugar seguro, ele pode ser usado em outra ocasião*.
 
 <br>
 
-## Publishing on GitHub (Pages)
+## Publicando no GitHub (Páginas)
 
-Ok, your project is already at the GitHub, but now we need to give instructions to build your website to GitHub, so let's go to your GitHub repository. [GitHub link](https://github.com/)
+Ok, seu projeto já está no GitHub, mas agora precisamos dar instruções para construir seu site no GitHub, então vamos ao seu repositório GitHub. [Link do GitHub](https://github.com/)
 
-At your repository website, click in `settings`
+No site do seu repositório, clique em `settings`
+
 ![](images/GitPage1.png){width="100%"}
 
 <br>
 
-Then select the `Pages` section at the sidebar menu
+Em seguida, selecione a seção `Pages` no menu da barra lateral
 ![](images/GitPage2.png){width="100%"}
 
 <br>
 
-You will see a section about `Source`, GitHub need to know which branch and which folder inside this branch is yours html files. So click at the `None` button and select `Branch: main`, then at the new windows with a folder symbol select `/docs` folder, and save.
+Você verá uma seção sobre `Source`, o GitHub precisa saber qual branch e qual pasta dentro deste branch estão seus arquivos html. Então clique no botão `None` e selecione `Branch: main`, então nas novas janelas com um símbolo de pasta selecione a pasta `/docs` e salve.
 
 ![](images/GitPage3.png){width="100%"}
 
 <br>
 
-Congratulations your website will be created, just wait some minutes. The link will appear in a window similar to this one.
+Parabéns seu site será criado, aguarde alguns minutos. O link aparecerá em uma janela semelhante a esta.
 
 ```
-®   Your site is ready to be published at
+® Seu site está pronto para ser publicado em
 https://YourUserName.github.io/YourRepositoryName/
 ```
 
-Copy this link, and get back to your repository website clicking at your repository name.
+Copie este link e volte ao site do seu repositório clicando no nome do seu repositório.
 
 ```
 UserName/RepositoryName
 ```
 
-at the right side of the page will have a section called about with a `gear`, click at the `gear` and paste your website link at the window `Website`, and save the changes.
-Now everyone that have access to your repository could see your project website just clicking at the link provided at the about section.
+no lado direito da página terá uma seção chamada about com uma `engrenagem`, clique na `engrenagem` e cole o link do seu site na janela `Website`, e salve as alterações.
+
+Agora, todos que têm acesso ao seu repositório podem ver o site do seu projeto apenas clicando no link fornecido na seção sobre.
