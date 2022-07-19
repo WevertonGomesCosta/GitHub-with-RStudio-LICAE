@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Ínicio"
 author: "Costa, W. G."
 date: "`r Sys.Date()`"
 site: workflowr::wflow_site
