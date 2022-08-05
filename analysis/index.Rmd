@@ -25,7 +25,12 @@ Acesse sua [página do GitHub](https://github.com/new) para criar um novo reposi
 
 <br>
 
-Adicione um nome criativo e uma descrição ao seu repositório, deixe como opção pública, que permitirá que você crie uma página no GitHub para compartilhar seu trabalho com todos nós.
+Adicione um nome criativo e uma descrição ao seu repositório, deixe como opção pública, que permitirá que você crie uma página no GitHub para compartilhar seu trabalho com todos nós. Para criar o repositório basta clicar no botão verde no final da página `Create repository`.
+
+![](images/GitHubNewRepo2.png){width="100%"}
+
+<br>
+
 
 Depois disso vamos copiar o `https::/link` do seu repositório para cloná-lo com o RStudio. Basta clicar no botão vermelho.
 
@@ -33,27 +38,28 @@ Depois disso vamos copiar o `https::/link` do seu repositório para cloná-lo co
 
 <br>
 
-Então vamos para o RStudio.
+#### Agora vamos para o RStudio.
 
-Para clonar (Baixar) seu repositório do GitHub, clique no botão `Project` no canto superior direito do RStudio e depois em `New Project...`.
+Para clonar (Baixar) seu repositório do GitHub, clique no botão `Project (None)` no canto superior direito do RStudio e depois em `New Project...`.
 
-![](images/CloneRepo1.png){width="100%"}
+![](images/CloneRepo3.png){width="100%"}
 
 <br>
 
 Uma janela chamada `New Project Wizard` aparecerá, selecione `Version Control`, e depois `Git`.
 
+<br>
+
 ![](images/CloneRepo2.png){width="100%"}
 
 <br>
 
-Isso abrirá uma janela com o `Clone Git Repository`. Aqui você vai apenas colar aquele link que eu pedi para você copiar há muito tempo na janela `Repository URL:`. Em `Criar projeto como subdiretório de:` selecione um diretório de fácil acesso para você, que facilitará sua localização posteriormente.
+Isso abrirá uma janela com o `Clone Git Repository`. Aqui você vai apenas colar aquele link que eu pedi para você copiar há muito tempo na janela `Repository URL:`. Em `Create project as subdirectory of:` selecione um diretório de fácil acesso para você, que facilitará sua localização posteriormente.
 
 *Eu sugiro que você crie uma pasta em seus `Documents` para manter seus projetos `workflow` organizados.*
 
-![](images/CloneRepo3.png){width="100%"}
+![](images/CloneRepo1.png){width="100%"}
 
-<br>
 <br>
 
 ## Crie um projeto `workflow`
@@ -73,18 +79,17 @@ install.packages("workflowr")
 Vamos começar a ler o pacote `workflowr`, e então executar sua função
 
 ```{r Configurar GitHub, eval=FALSE}
-biblioteca (workflowr)
+library(workflowr)
 
 wflow_git_config(user.name = "YourGitHubUserName", user.email = "YourGitHubEmail")
-
 ```
 
 <br>
 
 A função `wflow_git_config` salvará suas informações de nome de usuário e e-mail vinculados à sua conta do GitHub. Isso será necessário para permitir que você envie todas as suas alterações em seu projeto. *Esta configuração só será necessária uma vez por computador.*
 
-<br>
-Então vamos criar a estrutura de diretório `workflowr` com a função `wflow_start`. *você já tem um diretório principal para o seu projeto, basta copiá-lo e colar aqui.*
+Agora vamos criar a estrutura de diretório `workflowr` com a função `wflow_start`. 
+*Você já tem um diretório principal para o seu projeto, basta copiá-lo e colar aqui.*
 
 ```{r Iniciar o projeto, eval = FALSE}
 wflow_start(directory = ".",
@@ -140,6 +145,11 @@ meu projeto/
 ```
 <br>
 
+Exemplo no computador
+
+![](images/pastas.png){width="100%"}
+<br>
+
 `workflowr` também fornece um formato de modelo para seus arquivos Rmd que podem ser usados para criar seus sites de páginas do GitHub como este!!!
 
 ![](images/IndexTemplate.png){width="100%"}
@@ -147,8 +157,6 @@ meu projeto/
 <br>
 
 Você pode ver mais ideias de como personalizar o tema e o layout do site do seu projeto [aqui](https://workflowr.github.io/workflowr/articles/wflow-02-customization.html).
-
-<br>
 
 ## Funções do Tidyverse
 
@@ -167,17 +175,21 @@ Então, o que é um pedaço de código?
 >```
 >```
 
-mas você também pode usar isso no meio de qualquer frase como `2 + 2` é `r 2 + 2`, tudo que você precisa fazer é escrever seu código cercado por um par de aspas simples e a letra `r` assim.
+<br>
 
-```{r exemplo de pedaço}
+mas você também pode usar isso no meio de qualquer frase como `2 + 2` é = `r 2 + 2`, tudo que você precisa fazer é escrever seu código cercado por um par de aspas simples e a letra `r` assim.
+
+```{r exemplo de chunk}
 # Dois mais dois é igual a `r 2 + 2`
 ```
 
-R markdown permite que você crie `chuncks` para várias linguagens de programação, como python, c++...
+<br>
+
+`R markdown` permite que você crie `chuncks` para várias linguagens de programação, como python, c++...
 
 No seu RStudio existe um botão `+c` no menu abaixo do nome do seu arquivo Rmd, experimente para ver que outro tipo de linguagem você pode aplicar em um arquivo Rmd.
 
-<br>
+![](images/softwareinrstudio.png){width="50%"}
 
 ## Usando Rmarkdown
 
@@ -187,42 +199,48 @@ Você pode usar cabeçalhos, dar ênfase, criar tabelas, chamar uma figura, adic
 * [Sintaxe básica do Markdown](https://www.markdownguide.org/basic-syntax/)
 * [Guia de referência R Markdown](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.257912457.388466084.1647312703-2093965637.1647091994) - do RStudio.
 
-<br>
-
 ## Usando `workflowr`
 
 Vamos abrir o arquivo `index.Rmd` usando a função `wflow_open`
 
 ```{r Abra um arquivo Rmd, eval = FALSE}
-wflow_open("analise/index.Rmd")
+wflow_open("analysis/index.Rmd")
 ```
+<br>
+
+Uma guia do `R Markdown` irá ser aberta no RStudio.
+
+![](images/index.png){width="100%"}
 
 <br>
 
 Neste arquivo você pode atualizar o título da página de índice e começar a escrever os principais objetivos deste repositório. Como:
 
 ```
-Este repositório foi criado para auxiliar minha experiência de aprendizado com GitHub e workflowr.
+Este repositório foi criado para auxiliar minha experiência de aprendizado e integração do GitHub com o RStudio usando o workflowr.
 
-Meu primeiro código R neste projeto será nesta [página do hub do git](PCA.html)
+Meu primeiro código R neste projeto será nesta [página do hub do git](index.html)
 ```
-
 <br>
 
-Isso é ótimo, mas ainda não temos o arquivo `PCA.hmtl`, então vamos criá-lo com a função `wflow_open`.
+Também é possível criar scrips usando a função `wflow_open`. Vamos criar um arquivo chamado `PCA.Rmd`.
 
 ```{r Cria um novo arquivo Rmd, eval = FALSE}
-wflow_open("análise/PCA.Rmd")
+wflow_open("analysis/PCA.Rmd")
 ```
 
-Isso deve criar o arquivo PCA.Rmd, você deve estar procurando por ele agora.
+Isso deve criar o arquivo `PCA.Rmd` e abri-lo em outra guia do Rstudio.
+
 ![](images/PCARmd.png){width="100%"}
 
 <br>
 
-Você pode atualizar o nome para substituir a abreviação de `Análise de Componentes Principais` e adicionar uma nova introdução para a análise que faremos neste arquivo R markdown.
+O arquivo `PCA.Rmd` já está salvo em nossa pasta `analysis`.
+![](images/PCAcriado.png){width="100%"}
 
-Você pode seguir o exemplo deste site [WorkFlowRExample](https://lucianorogerio.github.io/WorkFlowRExample/).
+Você pode atualizar o nome para substituir a abreviação `PCA` para `Análise de Componentes Principais` e adicionar uma nova introdução para a análise que faremos irá fazer nesse arquivo R markdown.
+
+Você pode seguir o exemplo deste site [PCAExample](https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE/PCA.html).
 
 <br>
 
@@ -267,7 +285,7 @@ The current Git status is:
 Para publicar seu site html usando `wflow_publish` você precisará fornecer uma pequena mensagem que será vinculada à função `git commit`.
 
 ```{r publish WorkFlowR, eval = FALSE}
-wflow_publish(files = "analise/*.Rmd", mensagem = "Test")
+wflow_publish(files = "analysis/*.Rmd", mensagem = "Test")
 ```
 
 ```
