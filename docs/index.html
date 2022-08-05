@@ -516,15 +516,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreecd7dbb6697b4869fabc3cd7840e04c996d75b0a4targetblankcd7dbb6a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreefde81fcdd3db2636d4aea489512d948caf828734targetblankfde81fca">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/cd7dbb6697b4869fabc3cd7840e04c996d75b0a4" target="_blank">cd7dbb6</a>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/fde81fcdd3db2636d4aea489512d948caf828734" target="_blank">fde81fc</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreecd7dbb6697b4869fabc3cd7840e04c996d75b0a4targetblankcd7dbb6a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreefde81fcdd3db2636d4aea489512d948caf828734targetblankfde81fca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -534,7 +534,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/cd7dbb6697b4869fabc3cd7840e04c996d75b0a4" target="_blank">cd7dbb6</a>.
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/fde81fcdd3db2636d4aea489512d948caf828734" target="_blank">fde81fc</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -550,10 +550,6 @@ were generated:
 <pre><code>
 Ignored files:
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Deleted:    01-create_repo.Rmd
-    Deleted:    index.Rmd
 
 </code></pre>
 <p>
@@ -598,6 +594,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/blob/fde81fcdd3db2636d4aea489512d948caf828734/analysis/index.Rmd" target="_blank">fde81fc</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-05
+</td>
+<td>
+wflow_publish(files = "*")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/f9a57b08a48507cbe514f36f91bad7cebb0a68a4/docs/index.html" target="_blank">f9a57b0</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-05
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1220,7 +1250,6 @@ The current Git status is:
  untracked untracked                        2.1 Script Var BLUPs.R
  untracked untracked                Data_Crosses_Density_chart.txt
  untracked untracked                   Parentais selecionados.xlsx</code></pre>
-<p><br></p>
 <p>Para publicar seu site html usando <code>wflow_publish</code> você
 precisará fornecer uma pequena mensagem que será vinculada à função
 <code>git commit</code>.</p>
@@ -1281,7 +1310,6 @@ pressionando o botão <code>knit</code>, conforme mostrado abaixo.</p>
 na pasta <code>docs</code>. Depois de repetir esta etapa para todos os
 seus arquivos Rmd e verificar se todos estão conforme o esperado, você
 pode confirmar essas alterações no GitHub. Veja a próxima seção.</p>
-<p><br></p>
 </div>
 <div id="usando-o-git-para-salvar-suas-atualizações-no-github"
 class="section level2">
@@ -1309,8 +1337,11 @@ o número de commits em seu projeto.</p>
 GitHub e o RStudio.</p>
 <p><img src="images/GitRStudio.png" style="width:100.0%" /></p>
 <p><br></p>
-<p>Para confirmar suas atualizações, basta clicar no botão confirmar
-neste menu. Isso abrirá uma janela chamada
+<p>Para fazer o commit das atualizações clique em
+<code>Commit</code></p>
+<p><img src="images/GitRStudio2.png" style="width:100.0%" /></p>
+<p><br></p>
+<p>Isso abrirá uma janela chamada
 <code>Rstudio: Review Changes</code>.</p>
 <p><img src="images/RStudioReview.png" style="width:100.0%" /></p>
 <p><br></p>
@@ -1320,14 +1351,28 @@ decisão por chunk, você só tem que decidir se você
 <code>stage chunk</code> (manter as alterações) ou
 <code>discard chunk</code> (manter o arquivo como estava no último
 commit).</p>
-<blockquote>
-<p><em>NÃO SE ESQUEÇA DE ESCREVER UMA BREVE MENSAGEM SIGNIFICATIVA SOBRE
-AS NOVAS MUDANÇAS PARA ESTE COMMIT</em>.</p>
-</blockquote>
-<p>Basta clicar em <code>commit</code> e, em seguida, enviar seu novo
-commit para o GitHub clicando na seta verde (<code>Push</code>). Se for
-a primeira vez que você envia um commit para o GitHub em seu computador,
-o RStudio pedirá seu <code>usuário do GitHub</code> e uma
+<p>Para confirmar suas atualizações, siga as estapas: 1. Selecione todas
+as alterações que deseja atualizar, 2. Insera uma mensagem de commit em
+<code>Commit message</code> no lado superior da janela 3. Clique em
+commit <code>Commit</code>.</p>
+<p>Isso irá abrir uma nova janela do <code>Git Commit</code> com a
+descrição de todos os arquivos que foram atualizados.</p>
+<p><img src="images/RStudioReview2.png" style="width:100.0%" /></p>
+<p><br></p>
+<p>Agora feche essa janela clicando em <code>Close</code> na parte
+superior direita. Você verá que todas ou quase todas as atualizações
+foram realizadas.</p>
+<p><img src="images/RStudioReview3.png" style="width:100.0%" /></p>
+<p><br></p>
+<p>Para enviar seu novo commit para o GitHub, basta clicar na seta verde
+na parte superior da janela (<code>Push</code>).</p>
+<p>Isso irá abrir uma nova janela do <code>Git Push</code> com a
+descrição de todos os arquivos que foram enviados para o GitHub. Será
+apresentado algo como na imagem abaixo.</p>
+<p><img src="images/RStudioReview4.png" style="width:100.0%" /></p>
+<p><br></p>
+<p>Se for a primeira vez que você envia um commit para o GitHub em seu
+computador, o RStudio pedirá seu <code>usuário do GitHub</code> e uma
 <code>senha</code>, a senha que você deve fornecer é um
 <code>token de acesso pessoal</code>. Este <a
 href="https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html">link</a>
@@ -1344,31 +1389,40 @@ usado em outra ocasião</em>.</p>
 <p>Ok, seu projeto já está no GitHub, mas agora precisamos dar
 instruções para construir seu site no GitHub, então vamos ao seu
 repositório GitHub. <a href="https://github.com/">Link do GitHub</a></p>
-<p>No site do seu repositório, clique em <code>settings</code></p>
 <p><img src="images/GitPage1.png" style="width:100.0%" /></p>
 <p><br></p>
+<p>Selecione o repositório que criamos. No site do seu repositório,
+clique em <code>settings</code></p>
+<p><img src="images/GitPage2.png" style="width:100.0%" /></p>
+<p><br></p>
 <p>Em seguida, selecione a seção <code>Pages</code> no menu da barra
-lateral <img src="images/GitPage2.png" style="width:100.0%" /></p>
+lateral <img src="images/GitPage4.png" style="width:100.0%" /></p>
 <p><br></p>
 <p>Você verá uma seção sobre <code>Source</code>, o GitHub precisa saber
 qual branch e qual pasta dentro deste branch estão seus arquivos html.
 Então clique no botão <code>None</code> e selecione
 <code>Branch: main</code>, então nas novas janelas com um símbolo de
 pasta selecione a pasta <code>/docs</code> e salve.</p>
-<p><img src="images/GitPage3.png" style="width:100.0%" /></p>
+<p><img src="images/GitPage4.png" style="width:100.0%" /></p>
 <p><br></p>
 <p>Parabéns seu site será criado, aguarde alguns minutos. O link
 aparecerá em uma janela semelhante a esta.</p>
+<p><img src="images/GitPage5.png" style="width:100.0%" /></p>
+<p><br></p>
 <pre><code>® Seu site está pronto para ser publicado em
 https://YourUserName.github.io/YourRepositoryName/</code></pre>
 <p>Copie este link e volte ao site do seu repositório clicando no nome
 do seu repositório.</p>
 <pre><code>UserName/RepositoryName</code></pre>
-<p>no lado direito da página terá uma seção chamada about com uma
-<code>engrenagem</code>, clique na <code>engrenagem</code> e cole o link
-do seu site na janela <code>Website</code>, e salve as alterações.</p>
+<p>No lado direito da página terá uma seção chamada <code>About</code>
+com uma <code>engrenagem</code>, clique na <code>engrenagem</code> e
+cole o link do seu site na janela <code>Website</code>, e salve as
+alterações.</p>
+<p><img src="images/GitPage6.png" style="width:100.0%" /></p>
+<p><img src="images/GitPage7.png" style="width:100.0%" /></p>
 <p>Agora, todos que têm acesso ao seu repositório podem ver o site do
-seu projeto apenas clicando no link fornecido na seção sobre.</p>
+seu projeto apenas clicando no link fornecido na seção
+<code>About</code>.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
