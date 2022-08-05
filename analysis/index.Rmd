@@ -457,4 +457,4 @@ No lado direito da página terá uma seção chamada `About` com uma `engrenagem
 
 Agora, todos que têm acesso ao seu repositório podem ver o site do seu projeto apenas clicando no link fornecido na seção `About`.
 
-
+![](images/GitPage8.png){width="100%"}
