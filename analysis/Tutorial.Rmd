@@ -1,0 +1,103 @@
+---
+title: "Tutorial"
+author: "WevertonGomesCosta"
+date: "2022-08-05"
+output:
+  workflowr::wflow_html:
+    toc: yes
+  highlight: github
+editor_options:
+  chunk_output_type: console
+github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
+---
+# Usando este manual
+
+## Pré-requisitos
+
+1. Você precisa instalar R, Rstudio e pacotes R relevantes *com antecedência*. As instruções estão na próxima seção.
+2. Você precisa conhecer pelo menos alguma sintaxe do R. Links para recursos de aprendizagem também são fornecidos em uma seção abaixo. Se você nunca usou R antes, terá problemas para seguir os aspectos de codificação deste manual.
+
+## Instalar software e pacotes
+
+### Pacotes R, Rstudio, R
+
+- Instale R e Rstudio
+
+    - [Como instalar o R ​​no Windows, Mac OS X e Ubuntu Tutorial](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu)
+
+    - [Instalando R e RStudio](https://rstudio-education.github.io/hopr/starting.html)
+
+- [Rstudio](https://www.rstudio.com/)
+
+- Instalar pacotes
+
+    - `tidyverse` (inclui `dplyr`, `tidyr`, `ggplot2`, `magrittr` e outros realmente úteis)
+    - `workflowr`
+
+```{r, eval=F}
+install.packages(c("tidyverse","workflowr"))
+```
+
+
+### Crie uma conta no GitHub
+
+Gostaríamos de ensinar a você uma abordagem reproduzível e de acesso aberto para ciência de dados e seleção genômica.
+
+Para começar, acesse <https://github.com/> e crie uma conta gratuita, caso ainda não tenha uma.
+
+#### Git
+
+Os três possíveis aplicativos de emulador do Linux que os colegas me recomendaram para usuários do Windows:
+
+1\. Subsistema Windows para Linux: <https://docs.microsoft.com/en-us/windows/wsl/install>
+
+2\. Git BASH para Windows: <https://gitforwindows.org/>
+
+3\. Cygwin: <https://www.cygwin.com/>
+
+**Aconcelho a instalar o Git BASH para o Windowns**
+
+## Aprendendo R e mais
+
+- **R for Data Science (<https://r4ds.had.co.nz/>)**:\
+    Como a equipe do Rstudio / Tidyverse recomenda aqui (<https://www.tidyverse.org/learn/>), este livro é "o melhor lugar para começar a aprender o arrumado". Quase qualquer pessoa deve ser capaz de (1) ler a breve introdução e (2) examinar o índice e encontrar rapidamente um ponto de partida que atenda ao seu nível / interesse.
+
+- **Laboratório de desafio de dados (<https://datalab.stanford.edu/challenge-lab>)\
+    **Onde os alunos desenvolvem suas habilidades de dados resolvendo uma progressão de desafios cada vez mais difíceis. Acabei de descobrir isso. Há muito aqui que eu acho que é útil. Especialmente entre o "Conteúdo Aberto" (<https://dcl-docs.stanford.edu/home/>). Por exemplo:
+
+    -   **Disputa de dados**\
+        <https://dcl-wrangle.stanford.edu/manip-basics.html>
+
+    - **Programação Funcional\
+        **[https://dcl-prog.stanford.edu/\
+        ](https://dcl-prog.stanford.edu/)<https://dcl-prog.stanford.edu/purrr-mutate.html> (me disseram que meus loops usando funções do pacote purrr são confusos.. . Veja isso).\
+        Também:<https://dcl-prog.stanford.edu/purrr-parallel.html>
+
+- **Aprenda o tidyverse
+    **[https://www.tidyverse.org/learn/\
+    ](https://www.tidyverse.org/learn/)<https://www.tidyverse.org/packages/>
+
+- **APS 135: Introdução à Análise Exploratória de Dados com R\
+    **(<https://dzchilds.github.io/eda-for-bio/>)\
+    Tem algumas seções de introdução úteis sobre o básico do R e do Rstudio, parece ter saído de um departamento de ciência de plantas, então existe isso.
+
+- **Stat545: organização, exploração e análise de dados com R**\
+    <https://stat545.com/>
+
+### Rmarkdown e `workflowR`
+
+- [Rmarkdown Vignette and Cheatsheet](https://cran.r-project.org/web/packages/rmarkdown/vignettes/rmarkdown.html)
+- [`workflowr`: ciência de dados organizada + reproduzível + compartilhável em R](https://workflowr.github.io/workflowr/)
+
+### Código de tubulação `%>%`
+
+- [Introdução ao vídeo do YouTube](https://www.youtube.com/watch?v=KO35_7arizY&ab_channel=RsquaredAcademy)
+- [página do pacote magrittr](https://magrittr.tidyverse.org/)
+
+### Teclas de atalho
+
+Muito importante aprender alguns deles, especialmente estes:
+
+- `ctrl+alt+I` = criar bloco
+- `Shift+ctrl+M` = operador de tubo `%>%`
+- `ctrl+Enter` = enviar (executar) linhas de código em seu script Rmd ou R para o console.
