@@ -364,7 +364,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -375,8 +375,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -389,9 +389,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>GitHub-with-RStudio-LICAE/</code>
@@ -414,21 +414,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -519,15 +516,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtree476a1311708b3c8366c31b12a1d9f96ef8f2702etargetblank476a131a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreecd7dbb6697b4869fabc3cd7840e04c996d75b0a4targetblankcd7dbb6a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/476a1311708b3c8366c31b12a1d9f96ef8f2702e" target="_blank">476a131</a>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/cd7dbb6697b4869fabc3cd7840e04c996d75b0a4" target="_blank">cd7dbb6</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtree476a1311708b3c8366c31b12a1d9f96ef8f2702etargetblank476a131a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreecd7dbb6697b4869fabc3cd7840e04c996d75b0a4targetblankcd7dbb6a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -537,7 +534,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/476a1311708b3c8366c31b12a1d9f96ef8f2702e" target="_blank">476a131</a>.
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/cd7dbb6697b4869fabc3cd7840e04c996d75b0a4" target="_blank">cd7dbb6</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -554,11 +551,9 @@ were generated:
 Ignored files:
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  analysis/PCA.Rmd
-
 Unstaged changes:
-    Modified:   analysis/index.Rmd
+    Deleted:    01-create_repo.Rmd
+    Deleted:    index.Rmd
 
 </code></pre>
 <p>
@@ -603,6 +598,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/blob/cd7dbb6697b4869fabc3cd7840e04c996d75b0a4/analysis/index.Rmd" target="_blank">cd7dbb6</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-05
+</td>
+<td>
+wflow_publish(files = "*")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/cd7dbb6697b4869fabc3cd7840e04c996d75b0a4/docs/index.html" target="_blank">cd7dbb6</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-05
+</td>
+<td>
+wflow_publish(files = "*")
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -956,26 +985,29 @@ vermelho.</p>
 <p><img src="images/HttpsLink2CloneGHRepo.png"
 style="width:100.0%" /></p>
 <p><br></p>
-<p>Então vamos para o RStudio.</p>
+<div id="agora-vamos-para-o-rstudio." class="section level4">
+<h4>Agora vamos para o RStudio.</h4>
 <p>Para clonar (Baixar) seu repositório do GitHub, clique no botão
-<code>Project</code> no canto superior direito do RStudio e depois em
-<code>New Project...</code>.</p>
-<p><img src="images/CloneRepo1.png" style="width:100.0%" /></p>
+<code>Project (None)</code> no canto superior direito do RStudio e
+depois em <code>New Project...</code>.</p>
+<p><img src="images/CloneRepo3.png" style="width:100.0%" /></p>
 <p><br></p>
 <p>Uma janela chamada <code>New Project Wizard</code> aparecerá,
 selecione <code>Version Control</code>, e depois <code>Git</code>.</p>
+<p><br></p>
 <p><img src="images/CloneRepo2.png" style="width:100.0%" /></p>
 <p><br></p>
 <p>Isso abrirá uma janela com o <code>Clone Git Repository</code>. Aqui
 você vai apenas colar aquele link que eu pedi para você copiar há muito
 tempo na janela <code>Repository URL:</code>. Em
-<code>Criar projeto como subdiretório de:</code> selecione um diretório
+<code>Create project as subdirectory of:</code> selecione um diretório
 de fácil acesso para você, que facilitará sua localização
 posteriormente.</p>
 <p><em>Eu sugiro que você crie uma pasta em seus <code>Documents</code>
 para manter seus projetos <code>workflow</code> organizados.</em></p>
-<p><img src="images/CloneRepo3.png" style="width:100.0%" /></p>
-<p><br> <br></p>
+<p><img src="images/CloneRepo1.png" style="width:100.0%" /></p>
+<p><br></p>
+</div>
 </div>
 <div id="crie-um-projeto-workflow" class="section level2">
 <h2>Crie um projeto <code>workflow</code></h2>
@@ -993,7 +1025,7 @@ rastrear suas alterações ou bugs.</p>
 <h3>Iniciando seu projeto de workflow</h3>
 <p>Vamos começar a ler o pacote <code>workflowr</code>, e então executar
 sua função</p>
-<pre class="r"><code>biblioteca (workflowr)
+<pre class="r"><code>library(workflowr)
 
 wflow_git_config(user.name = &quot;YourGitHubUserName&quot;, user.email = &quot;YourGitHubEmail&quot;)</code></pre>
 <p><br></p>
@@ -1002,10 +1034,9 @@ nome de usuário e e-mail vinculados à sua conta do GitHub. Isso será
 necessário para permitir que você envie todas as suas alterações em seu
 projeto. <em>Esta configuração só será necessária uma vez por
 computador.</em></p>
-<p><br> Então vamos criar a estrutura de diretório
-<code>workflowr</code> com a função <code>wflow_start</code>. <em>você
-já tem um diretório principal para o seu projeto, basta copiá-lo e colar
-aqui.</em></p>
+<p>Agora vamos criar a estrutura de diretório <code>workflowr</code> com
+a função <code>wflow_start</code>. <em>Você já tem um diretório
+principal para o seu projeto, basta copiá-lo e colar aqui.</em></p>
 <pre class="r"><code>wflow_start(directory = &quot;.&quot;,
           name = &quot;YourRepositoryName&quot;,
           git = TRUE,
@@ -1058,6 +1089,8 @@ subdiretórios:</p>
 | \-- README.md
 |-- README.md</code></pre>
 <p><br></p>
+<p>Exemplo no computador</p>
+<p><img src="images/pastas.png" style="width:100.0%" /> <br></p>
 <p><code>workflowr</code> também fornece um formato de modelo para seus
 arquivos Rmd que podem ser usados para criar seus sites de páginas do
 GitHub como este!!!</p>
@@ -1066,7 +1099,6 @@ GitHub como este!!!</p>
 <p>Você pode ver mais ideias de como personalizar o tema e o layout do
 site do seu projeto <a
 href="https://workflowr.github.io/workflowr/articles/wflow-02-customization.html">aqui</a>.</p>
-<p><br></p>
 </div>
 </div>
 <div id="funções-do-tidyverse" class="section level2">
@@ -1089,17 +1121,19 @@ dim(iris)</code></pre>
 <pre><code>[1] 150   5</code></pre>
 <p>```</p>
 </blockquote>
+<p><br></p>
 <p>mas você também pode usar isso no meio de qualquer frase como
-<code>2 + 2</code> é 4, tudo que você precisa fazer é escrever seu
+<code>2 + 2</code> é = 4, tudo que você precisa fazer é escrever seu
 código cercado por um par de aspas simples e a letra <code>r</code>
 assim.</p>
 <pre class="r"><code># Dois mais dois é igual a `r 2 + 2`</code></pre>
-<p>R markdown permite que você crie <code>chuncks</code> para várias
-linguagens de programação, como python, c++…</p>
+<p><br></p>
+<p><code>R markdown</code> permite que você crie <code>chuncks</code>
+para várias linguagens de programação, como python, c++…</p>
 <p>No seu RStudio existe um botão <code>+c</code> no menu abaixo do nome
 do seu arquivo Rmd, experimente para ver que outro tipo de linguagem
 você pode aplicar em um arquivo Rmd.</p>
-<p><br></p>
+<p><img src="images/softwareinrstudio.png" style="width:50.0%" /></p>
 </div>
 </div>
 <div id="usando-rmarkdown" class="section level2">
@@ -1114,7 +1148,6 @@ do Markdown</a></li>
 href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.257912457.388466084.1647312703-2093965637.1647091994">Guia
 de referência R Markdown</a> - do RStudio.</li>
 </ul>
-<p><br></p>
 </div>
 <div id="usando-workflowr" class="section level2">
 <h2>Usando <code>workflowr</code></h2>
@@ -1122,19 +1155,26 @@ de referência R Markdown</a> - do RStudio.</li>
 <code>wflow_open</code></p>
 <pre class="r"><code>wflow_open(&quot;analysis/index.Rmd&quot;)</code></pre>
 <p><br></p>
+<p>Uma guia do <code>R Markdown</code> irá ser aberta no RStudio.</p>
+<p><img src="images/index.png" style="width:100.0%" /></p>
+<p><br></p>
 <p>Neste arquivo você pode atualizar o título da página de índice e
 começar a escrever os principais objetivos deste repositório. Como:</p>
-<pre><code>Este repositório foi criado para auxiliar minha experiência de aprendizado com GitHub e workflowr.
+<pre><code>Este repositório foi criado para auxiliar minha experiência de aprendizado e integração do GitHub com o RStudio usando o workflowr.
 
 Meu primeiro código R neste projeto será nesta [página do hub do git](index.html)</code></pre>
 <p><br></p>
-<p>Também é possíuvel criar scrips usando a função
-<code>wflow_open</code>. Vamos criar um arquivo chado
+<p>Também é possível criar scrips usando a função
+<code>wflow_open</code>. Vamos criar um arquivo chamado
 <code>PCA.Rmd</code>.</p>
 <pre class="r"><code>wflow_open(&quot;analysis/PCA.Rmd&quot;)</code></pre>
-<p>Isso deve criar o arquivo PCA.Rmd, você deve estar procurando por ele
-agora. <img src="images/PCARmd.png" style="width:100.0%" /></p>
+<p>Isso deve criar o arquivo <code>PCA.Rmd</code> e abri-lo em outra
+guia do Rstudio.</p>
+<p><img src="images/PCARmd.png" style="width:100.0%" /></p>
 <p><br></p>
+<p>O arquivo <code>PCA.Rmd</code> já está salvo em nossa pasta
+<code>analysis</code>. <img src="images/PCAcriado.png"
+style="width:100.0%" /></p>
 <p>Você pode atualizar o nome para substituir a abreviação
 <code>PCA</code> para <code>Análise de Componentes Principais</code> e
 adicionar uma nova introdução para a análise que faremos irá fazer nesse
@@ -1352,17 +1392,21 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] workflowr_1.7.0
+
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.8.3     rstudioapi_0.13  whisker_0.4      knitr_1.39      
- [5] magrittr_2.0.3   workflowr_1.7.0  R6_2.5.1         rlang_1.0.4     
- [9] fastmap_1.1.0    fansi_1.0.3      stringr_1.4.0    tools_4.1.3     
-[13] xfun_0.30        utf8_1.2.2       cli_3.3.0        git2r_0.30.1    
-[17] jquerylib_0.1.4  htmltools_0.5.2  ellipsis_0.3.2   rprojroot_2.0.3 
-[21] yaml_2.3.5       digest_0.6.29    tibble_3.1.7     lifecycle_1.0.1 
-[25] crayon_1.5.1     later_1.3.0      sass_0.4.1       vctrs_0.4.1     
-[29] promises_1.2.0.1 fs_1.5.2         glue_1.6.2       evaluate_0.15   
-[33] rmarkdown_2.14   stringi_1.7.6    bslib_0.3.1      compiler_4.1.3  
-[37] pillar_1.7.0     jsonlite_1.8.0   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
+ [1] Rcpp_1.0.8.3     bslib_0.3.1      compiler_4.1.3   pillar_1.7.0    
+ [5] later_1.3.0      git2r_0.30.1     jquerylib_0.1.4  tools_4.1.3     
+ [9] getPass_0.2-2    digest_0.6.29    jsonlite_1.8.0   evaluate_0.15   
+[13] tibble_3.1.7     lifecycle_1.0.1  pkgconfig_2.0.3  rlang_1.0.4     
+[17] cli_3.3.0        rstudioapi_0.13  yaml_2.3.5       xfun_0.30       
+[21] fastmap_1.1.0    httr_1.4.3       stringr_1.4.0    knitr_1.39      
+[25] sass_0.4.1       fs_1.5.2         vctrs_0.4.1      rprojroot_2.0.3 
+[29] glue_1.6.2       R6_2.5.1         processx_3.5.3   fansi_1.0.3     
+[33] rmarkdown_2.14   callr_3.7.0      magrittr_2.0.3   whisker_0.4     
+[37] ps_1.6.0         promises_1.2.0.1 htmltools_0.5.2  ellipsis_0.3.2  
+[41] httpuv_1.6.5     utf8_1.2.2       stringi_1.7.6    crayon_1.5.1    </code></pre>
 </div>
 </div>
 </div>
