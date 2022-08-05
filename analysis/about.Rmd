@@ -2,9 +2,11 @@
 title: "Sobre"
 output:
   workflowr::wflow_html:
-    toc: false
+    toc: yes
+  highlight: github
 editor_options:
   chunk_output_type: console
+github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 ---
 
 # Manual: Integrando o GitHub com o Rstudio. 
