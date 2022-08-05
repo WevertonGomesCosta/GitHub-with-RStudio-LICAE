@@ -5,6 +5,8 @@ navbar:
   left:
   - text: Home
     href: index.html
+  - text: Tutorial
+    href: Tutorial.html
   - text: PCA
     href: PCA.html
   - text: About

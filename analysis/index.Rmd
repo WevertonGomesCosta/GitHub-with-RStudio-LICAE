@@ -400,6 +400,12 @@ Isso irá abrir uma nova janela do `Git Push` com a descrição de todos os arqu
 ![](images/RStudioReview4.png){width="100%"}
 
 <br>
+Um modo mais fácil de realizar a publicação de todas as atualizações de uma vez é usando `wflow_publish`. Assim todas as suas atualizações serão "commitadas" e enviadas para o GitHub, sem todo aquele processo anterior.
+
+```{r}
+wflow_publish(files = "*")
+```
+
 
 Se for a primeira vez que você envia um commit para o GitHub em seu computador, o RStudio pedirá seu `usuário do GitHub` e uma `senha`, a senha que você deve fornecer é um `token de acesso pessoal`. Este [link](https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html) fornecerá o que você precisa fazer para gerar um.
 
