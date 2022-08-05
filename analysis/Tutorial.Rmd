@@ -5,10 +5,8 @@ date: "2022-08-05"
 output:
   workflowr::wflow_html:
     toc: yes
-  highlight: github
 editor_options:
   chunk_output_type: console
-github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 ---
 # Usando este manual
 
