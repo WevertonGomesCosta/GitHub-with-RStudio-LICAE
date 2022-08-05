@@ -255,6 +255,7 @@ wflow_status()
 ```
 
 Você deve ver algo assim.
+
 ```
 Status of 4 Rmd files
 
@@ -279,8 +280,6 @@ The current Git status is:
  untracked untracked                Data_Crosses_Density_chart.txt
  untracked untracked                   Parentais selecionados.xlsx
 ```
-
-<br>
 
 Para publicar seu site html usando `wflow_publish` você precisará fornecer uma pequena mensagem que será vinculada à função `git commit`.
 
@@ -344,8 +343,6 @@ Você pode pedir ao `RStudio` para criar seu site html pressionando o botão `kn
 
 O `RStudio` criará/atualizará seu arquivo html e o salvará na pasta `docs`. Depois de repetir esta etapa para todos os seus arquivos Rmd e verificar se todos estão conforme o esperado, você pode confirmar essas alterações no GitHub. Veja a próxima seção.
 
-<br>
-
 ## Usando o Git para salvar suas atualizações no GitHub
 
 O Git tem quatro funções principais:
@@ -365,7 +362,13 @@ O Git possui um menu próprio para facilitar a interação entre o GitHub e o RS
 
 <br>
 
-Para confirmar suas atualizações, basta clicar no botão confirmar neste menu. Isso abrirá uma janela chamada `Rstudio: Review Changes`.
+Para fazer o commit das atualizações clique em `Commit`
+
+![](images/GitRStudio2.png){width="100%"}
+
+<br>
+
+Isso abrirá uma janela chamada `Rstudio: Review Changes`. 
 
 ![](images/RStudioReview.png){width="100%"}
 
@@ -373,9 +376,31 @@ Para confirmar suas atualizações, basta clicar no botão confirmar neste menu.
 
 Nesta janela, você terá permissão para `stage` (confirmar) as alterações que você fez em todos os arquivos. Você pode tomar esta decisão por chunk, você só tem que decidir se você `stage chunk` (manter as alterações) ou `discard chunk` (manter o arquivo como estava no último commit).
 
->*NÃO SE ESQUEÇA DE ESCREVER UMA BREVE MENSAGEM SIGNIFICATIVA SOBRE AS NOVAS MUDANÇAS PARA ESTE COMMIT*.
+Para confirmar suas atualizações, siga as estapas:
+1. Selecione todas as alterações que deseja atualizar, 
+2. Insera uma mensagem de commit em `Commit message` no lado superior da janela
+3. Clique em commit `Commit`.
 
-Basta clicar em `commit` e, em seguida, enviar seu novo commit para o GitHub clicando na seta verde (`Push`).
+Isso irá abrir uma nova janela do `Git Commit` com a descrição de todos os arquivos que foram atualizados.
+
+![](images/RStudioReview2.png){width="100%"}
+
+<br>
+
+Agora feche essa janela clicando em `Close` na parte superior direita. Você verá que todas ou quase todas as atualizações foram realizadas.
+
+![](images/RStudioReview3.png){width="100%"}
+
+<br>
+
+Para enviar seu novo commit para o GitHub, basta clicar na seta verde na parte superior da janela (`Push`).
+
+Isso irá abrir uma nova janela do `Git Push` com a descrição de todos os arquivos que foram enviados para o GitHub. Será apresentado algo como na imagem abaixo.
+
+![](images/RStudioReview4.png){width="100%"}
+
+<br>
+
 Se for a primeira vez que você envia um commit para o GitHub em seu computador, o RStudio pedirá seu `usuário do GitHub` e uma `senha`, a senha que você deve fornecer é um `token de acesso pessoal`. Este [link](https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html) fornecerá o que você precisa fazer para gerar um.
 
 >*Lembre-se de guardar este token em um lugar seguro, ele pode ser usado em outra ocasião*.
@@ -386,24 +411,32 @@ Se for a primeira vez que você envia um commit para o GitHub em seu computador,
 
 Ok, seu projeto já está no GitHub, mas agora precisamos dar instruções para construir seu site no GitHub, então vamos ao seu repositório GitHub. [Link do GitHub](https://github.com/)
 
-No site do seu repositório, clique em `settings`
-
 ![](images/GitPage1.png){width="100%"}
 
 <br>
 
-Em seguida, selecione a seção `Pages` no menu da barra lateral
+Selecione o repositório que criamos. No site do seu repositório, clique em `settings`
+
 ![](images/GitPage2.png){width="100%"}
+
+<br>
+
+Em seguida, selecione a seção `Pages` no menu da barra lateral
+![](images/GitPage4.png){width="100%"}
 
 <br>
 
 Você verá uma seção sobre `Source`, o GitHub precisa saber qual branch e qual pasta dentro deste branch estão seus arquivos html. Então clique no botão `None` e selecione `Branch: main`, então nas novas janelas com um símbolo de pasta selecione a pasta `/docs` e salve.
 
-![](images/GitPage3.png){width="100%"}
+![](images/GitPage4.png){width="100%"}
 
 <br>
 
 Parabéns seu site será criado, aguarde alguns minutos. O link aparecerá em uma janela semelhante a esta.
+
+![](images/GitPage5.png){width="100%"}
+
+<br>
 
 ```
 ® Seu site está pronto para ser publicado em
@@ -416,6 +449,12 @@ Copie este link e volte ao site do seu repositório clicando no nome do seu repo
 UserName/RepositoryName
 ```
 
-no lado direito da página terá uma seção chamada about com uma `engrenagem`, clique na `engrenagem` e cole o link do seu site na janela `Website`, e salve as alterações.
+No lado direito da página terá uma seção chamada `About` com uma `engrenagem`, clique na `engrenagem` e cole o link do seu site na janela `Website`, e salve as alterações.
 
-Agora, todos que têm acesso ao seu repositório podem ver o site do seu projeto apenas clicando no link fornecido na seção sobre.
+![](images/GitPage6.png){width="100%"}
+
+![](images/GitPage7.png){width="100%"}
+
+Agora, todos que têm acesso ao seu repositório podem ver o site do seu projeto apenas clicando no link fornecido na seção `About`.
+
+
