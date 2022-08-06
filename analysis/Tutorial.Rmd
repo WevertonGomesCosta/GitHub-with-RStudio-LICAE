@@ -99,5 +99,5 @@ Os três possíveis aplicativos de emulador do Linux que os colegas me recomenda
 Muito importante aprender alguns deles, especialmente estes:
 
 - `ctrl+alt+I` = criar bloco
-- `Shift+ctrl+M` = operador de tubo `%>%`
+- `Shift+ctrl+M` = operador pipe `%>%`
 - `ctrl+Enter` = enviar (executar) linhas de código em seu script Rmd ou R para o console.
