@@ -1,10 +1,10 @@
-name: "GitHub with RStudio LICAE"
+name: "GitHub-with-RStudio-LICAE"
 output_dir: ../docs
 navbar:
   title: "GitHub with RStudio LICAE"
   left:
   - text: Tutorial
-    href: index.html
+    href: tutorial.html
   - text: Usando este material
     href: using-this-material.html
   - text: PCA Example
