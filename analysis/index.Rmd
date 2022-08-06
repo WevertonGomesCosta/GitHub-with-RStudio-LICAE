@@ -21,20 +21,20 @@ Para evitar qualquer conflito entre o RStudio e o GitHub, vamos criar seu reposi
 
 Acesse sua [página do GitHub](https://github.com/new) para criar um novo repositório.
 
-![](images/GitHubNewRepo.png){width="100%"}
+![](images/GitHubNewRepo.JPG){width="100%"}
 
 <br>
 
 Adicione um nome criativo e uma descrição ao seu repositório, deixe como opção pública, que permitirá que você crie uma página no GitHub para compartilhar seu trabalho com todos nós. Para criar o repositório basta clicar no botão verde no final da página `Create repository`.
 
-![](images/GitHubNewRepo2.png){width="100%"}
+![](images/GitHubNewRepo2.JPG){width="100%"}
 
 <br>
 
 
 Depois disso vamos copiar o `https::/link` do seu repositório para cloná-lo com o RStudio. Basta clicar no botão vermelho.
 
-![](images/HttpsLink2CloneGHRepo.png){width="100%"}
+![](images/HttpsLink2CloneGHRepo.JPG){width="100%"}
 
 <br>
 
@@ -42,7 +42,7 @@ Depois disso vamos copiar o `https::/link` do seu repositório para cloná-lo co
 
 Para clonar (Baixar) seu repositório do GitHub, clique no botão `Project (None)` no canto superior direito do RStudio e depois em `New Project...`.
 
-![](images/CloneRepo3.png){width="100%"}
+![](images/CloneRepo3.JPG){width="100%"}
 
 <br>
 
@@ -50,7 +50,7 @@ Uma janela chamada `New Project Wizard` aparecerá, selecione `Version Control`,
 
 <br>
 
-![](images/CloneRepo2.png){width="100%"}
+![](images/CloneRepo2.JPG){width="100%"}
 
 <br>
 
@@ -58,7 +58,7 @@ Isso abrirá uma janela com o `Clone Git Repository`. Aqui você vai apenas cola
 
 *Eu sugiro que você crie uma pasta em seus `Documents` para manter seus projetos `workflow` organizados.*
 
-![](images/CloneRepo1.png){width="100%"}
+![](images/CloneRepo1.JPG){width="100%"}
 
 <br>
 
@@ -147,12 +147,12 @@ meu projeto/
 
 Exemplo no computador
 
-![](images/pastas.png){width="100%"}
+![](images/pastas.JPG){width="100%"}
 <br>
 
 `workflowr` também fornece um formato de modelo para seus arquivos Rmd que podem ser usados para criar seus sites de páginas do GitHub como este!!!
 
-![](images/IndexTemplate.png){width="100%"}
+![](images/IndexTemplate.JPG){width="100%"}
 
 <br>
 
@@ -189,7 +189,7 @@ mas você também pode usar isso no meio de qualquer frase como `2 + 2` é = `r 
 
 No seu RStudio existe um botão `+c` no menu abaixo do nome do seu arquivo Rmd, experimente para ver que outro tipo de linguagem você pode aplicar em um arquivo Rmd.
 
-![](images/softwareinrstudio.png){width="50%"}
+![](images/softwareinrstudio.JPG){width="50%"}
 
 ## Usando Rmarkdown
 
@@ -210,7 +210,7 @@ wflow_open("analysis/index.Rmd")
 
 Uma guia do `R Markdown` irá ser aberta no RStudio.
 
-![](images/index.png){width="100%"}
+![](images/index.JPG){width="100%"}
 
 <br>
 
@@ -231,12 +231,12 @@ wflow_open("analysis/PCA.Rmd")
 
 Isso deve criar o arquivo `PCA.Rmd` e abri-lo em outra guia do Rstudio.
 
-![](images/PCARmd.png){width="100%"}
+![](images/PCARmd.JPG){width="100%"}
 
 <br>
 
 O arquivo `PCA.Rmd` já está salvo em nossa pasta `analysis`.
-![](images/PCAcriado.png){width="100%"}
+![](images/PCAcriado.JPG){width="100%"}
 
 Você pode atualizar o nome para substituir a abreviação `PCA` para `Análise de Componentes Principais` e adicionar uma nova introdução para a análise que faremos irá fazer nesse arquivo R markdown.
 
@@ -337,7 +337,7 @@ No entanto, prefiro criar/atualizar os arquivos html usando o botão `Knit` e su
 
 Você pode pedir ao `RStudio` para criar seu site html pressionando o botão `knit`, conforme mostrado abaixo.
 
-![](images/KnitRmdFile.png){width="100%"}
+![](images/KnitRmdFile.JPG){width="100%"}
 
 <br>
 
@@ -358,19 +358,19 @@ Para uma boa prática de commit, apenas comite suas atualizações depois de ter
 
 O Git possui um menu próprio para facilitar a interação entre o GitHub e o RStudio.
 
-![](images/GitRStudio.png){width="100%"}
+![](images/GitRStudio.JPG){width="100%"}
 
 <br>
 
 Para fazer o commit das atualizações clique em `Commit`
 
-![](images/GitRStudio2.png){width="100%"}
+![](images/GitRStudio2.JPG){width="100%"}
 
 <br>
 
 Isso abrirá uma janela chamada `Rstudio: Review Changes`. 
 
-![](images/RStudioReview.png){width="100%"}
+![](images/RStudioReview.JPG){width="100%"}
 
 <br>
 
@@ -383,13 +383,13 @@ Para confirmar suas atualizações, siga as estapas:
 
 Isso irá abrir uma nova janela do `Git Commit` com a descrição de todos os arquivos que foram atualizados.
 
-![](images/RStudioReview2.png){width="100%"}
+![](images/RStudioReview2.JPG){width="100%"}
 
 <br>
 
 Agora feche essa janela clicando em `Close` na parte superior direita. Você verá que todas ou quase todas as atualizações foram realizadas.
 
-![](images/RStudioReview3.png){width="100%"}
+![](images/RStudioReview3.JPG){width="100%"}
 
 <br>
 
@@ -397,7 +397,7 @@ Para enviar seu novo commit para o GitHub, basta clicar na seta verde na parte s
 
 Isso irá abrir uma nova janela do `Git Push` com a descrição de todos os arquivos que foram enviados para o GitHub. Será apresentado algo como na imagem abaixo.
 
-![](images/RStudioReview4.png){width="100%"}
+![](images/RStudioReview4.JPG){width="100%"}
 
 <br>
 Um modo mais fácil de realizar a publicação de todas as atualizações de uma vez é usando `wflow_publish`. Assim todas as suas atualizações serão "commitadas" e enviadas para o GitHub, sem todo aquele processo anterior.
@@ -413,30 +413,30 @@ Se for a primeira vez que você envia um commit para o GitHub em seu computador,
 
 Ok, seu projeto já está no GitHub, mas agora precisamos dar instruções para construir seu site no GitHub, então vamos ao seu repositório GitHub. [Link do GitHub](https://github.com/)
 
-![](images/GitPage1.png){width="100%"}
+![](images/GitPage1.JPG){width="100%"}
 
 <br>
 
 Selecione o repositório que criamos. No site do seu repositório, clique em `settings`
 
-![](images/GitPage2.png){width="100%"}
+![](images/GitPage2.JPG){width="100%"}
 
 <br>
 
 Em seguida, selecione a seção `Pages` no menu da barra lateral
-![](images/GitPage4.png){width="100%"}
+![](images/GitPage4.JPG){width="100%"}
 
 <br>
 
 Você verá uma seção sobre `Source`, o GitHub precisa saber qual branch e qual pasta dentro deste branch estão seus arquivos html. Então clique no botão `None` e selecione `Branch: main`, então nas novas janelas com um símbolo de pasta selecione a pasta `/docs` e salve.
 
-![](images/GitPage4.png){width="100%"}
+![](images/GitPage4.JPG){width="100%"}
 
 <br>
 
 Parabéns seu site será criado, aguarde alguns minutos. O link aparecerá em uma janela semelhante a esta.
 
-![](images/GitPage5.png){width="100%"}
+![](images/GitPage5.JPG){width="100%"}
 
 <br>
 
@@ -453,10 +453,10 @@ UserName/RepositoryName
 
 No lado direito da página terá uma seção chamada `About` com uma `engrenagem`, clique na `engrenagem` e cole o link do seu site na janela `Website`, e salve as alterações.
 
-![](images/GitPage6.png){width="100%"}
+![](images/GitPage6.JPG){width="100%"}
 
-![](images/GitPage7.png){width="100%"}
+![](images/GitPage7.JPG){width="100%"}
 
 Agora, todos que têm acesso ao seu repositório podem ver o site do seu projeto apenas clicando no link fornecido na seção `About`.
 
-![](images/GitPage8.png){width="100%"}
+![](images/GitPage8.JPG){width="100%"}
