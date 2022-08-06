@@ -1,7 +1,7 @@
 name: "GitHub-with-RStudio-LICAE"
 output_dir: ../docs
 navbar:
-  title: "GitHub-with-RStudio-LICAE"
+  title: "GitHub with RStudio LICAE"
   left:
   - text: Home
     href: index.html
