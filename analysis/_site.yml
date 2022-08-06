@@ -3,11 +3,11 @@ output_dir: ../docs
 navbar:
   title: "GitHub with RStudio LICAE"
   left:
-  - text: Home
-    href: index.html
   - text: Tutorial
-    href: Tutorial.html
-  - text: PCA
+    href: index.html
+  - text: Usando este material
+    href: using-this-material.html
+  - text: PCA Example
     href: PCA.html
   - text: About
     href: about.html
