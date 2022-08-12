@@ -6,7 +6,7 @@ site: workflowr::wflow_site
 url: https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE
 output:
   workflowr::wflow_html:
-    toc: FALSE
+    toc: yes
   highlight: github
 editor_options:
   chunk_output_type: console
