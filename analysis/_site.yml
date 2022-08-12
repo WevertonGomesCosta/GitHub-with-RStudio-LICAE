@@ -24,6 +24,5 @@ navbar:
 output:
   workflowr::wflow_html:
     toc: yes
-    toc_float: yes
     theme: yeti
     highlight: breezedark
