@@ -17,6 +17,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/wevertongomescosta/GitHub-with-RStudio-LICAE
 output:
   workflowr::wflow_html:
     toc: yes
