@@ -11,14 +11,14 @@
 
 <meta name="author" content="Costa, W. G." />
 
-<meta name="date" content="2022-08-06" />
+<meta name="date" content="2022-08-12" />
 
 <title>Tutorial</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -31,12 +31,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -57,18 +54,106 @@ div.section {
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
   }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #232629;
+    color: #7a7c7d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+div.sourceCode
+  { color: #cfcfc2; background-color: #232629; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #cfcfc2; } /* Normal */
+code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+code span.an { color: #3f8058; } /* Annotation */
+code span.at { color: #2980b9; } /* Attribute */
+code span.bn { color: #f67400; } /* BaseN */
+code span.bu { color: #7f8c8d; } /* BuiltIn */
+code span.cf { color: #fdbc4b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #3daee9; } /* Char */
+code span.cn { color: #27aeae; font-weight: bold; } /* Constant */
+code span.co { color: #7a7c7d; } /* Comment */
+code span.cv { color: #7f8c8d; } /* CommentVar */
+code span.do { color: #a43340; } /* Documentation */
+code span.dt { color: #2980b9; } /* DataType */
+code span.dv { color: #f67400; } /* DecVal */
+code span.er { color: #da4453; text-decoration: underline; } /* Error */
+code span.ex { color: #0099ff; font-weight: bold; } /* Extension */
+code span.fl { color: #f67400; } /* Float */
+code span.fu { color: #8e44ad; } /* Function */
+code span.im { color: #27ae60; } /* Import */
+code span.in { color: #c45b00; } /* Information */
+code span.kw { color: #cfcfc2; font-weight: bold; } /* Keyword */
+code span.op { color: #cfcfc2; } /* Operator */
+code span.ot { color: #27ae60; } /* Other */
+code span.pp { color: #27ae60; } /* Preprocessor */
+code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #da4453; } /* SpecialString */
+code span.st { color: #f44f4f; } /* String */
+code span.va { color: #27aeae; } /* Variable */
+code span.vs { color: #da4453; } /* VerbatimString */
+code span.wa { color: #da4453; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
 </script>
-
-
 
 
 
@@ -237,69 +322,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -307,16 +329,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -334,10 +346,22 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="tutorial.html">Tutorial</a>
+  <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="using-this-material.html">Usando este material</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Tutorial
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="using-this-material.html">Usando este material</a>
+    </li>
+    <li>
+      <a href="pre-requisitos.html">Pre requisitos</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="PCA.html">PCA Example</a>
@@ -350,7 +374,13 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/wevertongomescosta/GitHub-with-RStudio-LICAE">
+    <span class="fa fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -362,7 +392,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Tutorial</h1>
 <h4 class="author">Costa, W. G.</h4>
-<h4 class="date">2022-08-06</h4>
+<h4 class="date">2022-08-12</h4>
 
 </div>
 
@@ -370,7 +400,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -381,8 +411,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -391,13 +421,13 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-08-06
+<strong>Last updated:</strong> 2022-08-12
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>GitHub-with-RStudio-LICAE/</code>
@@ -420,21 +450,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R
-Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -525,15 +552,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreeb8d9c44b098223ab986d90dcdb269b28a093f073targetblankb8d9c44a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreed999186df8ac026ae3da13ba5bd0d37e5940d615targetblankd999186a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/b8d9c44b098223ab986d90dcdb269b28a093f073" target="_blank">b8d9c44</a>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/d999186df8ac026ae3da13ba5bd0d37e5940d615" target="_blank">d999186</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreeb8d9c44b098223ab986d90dcdb269b28a093f073targetblankb8d9c44a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreed999186df8ac026ae3da13ba5bd0d37e5940d615targetblankd999186a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -543,7 +570,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/b8d9c44b098223ab986d90dcdb269b28a093f073" target="_blank">b8d9c44</a>.
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/d999186df8ac026ae3da13ba5bd0d37e5940d615" target="_blank">d999186</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -560,11 +587,8 @@ were generated:
 Ignored files:
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  analysis/index.Rmd
-
 Unstaged changes:
-    Deleted:    analysis/tutorial.Rmd
+    Modified:   analysis/_site.yml
 
 </code></pre>
 <p>
@@ -609,6 +633,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/blob/512947f3b8d4a330814e38da9274d145294cc6ca/analysis/index.Rmd" target="_blank">512947f</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-12
+</td>
+<td>
+Update
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/blob/7bf66760fb0faf59dde454c3649226e1db303a74/analysis/index.Rmd" target="_blank">7bf6676</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-06
+</td>
+<td>
+Update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/7bf66760fb0faf59dde454c3649226e1db303a74/docs/index.html" target="_blank">7bf6676</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-06
+</td>
+<td>
+Update
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1353,15 +1428,15 @@ salvando todas as alterações em seu projeto que você faz durante o
 caminho, permitindo voltar facilmente para versões mais antigas ou
 rastrear suas alterações ou bugs.</p>
 <p>Então vamos começar a instalar o pacote <code>workflowr</code></p>
-<pre class="r"><code>install.packages(&quot;workflowr&quot;)</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;workflowr&quot;</span>)</span></code></pre></div>
 <p><br></p>
 <div id="iniciando-seu-projeto-de-workflow" class="section level3">
 <h3>Iniciando seu projeto de workflow</h3>
 <p>Vamos começar a ler o pacote <code>workflowr</code>, e então executar
 sua função</p>
-<pre class="r"><code>library(workflowr)
-
-wflow_git_config(user.name = &quot;YourGitHubUserName&quot;, user.email = &quot;YourGitHubEmail&quot;)</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(workflowr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wflow_git_config</span>(<span class="at">user.name =</span> <span class="st">&quot;YourGitHubUserName&quot;</span>, <span class="at">user.email =</span> <span class="st">&quot;YourGitHubEmail&quot;</span>)</span></code></pre></div>
 <p><br></p>
 <p>A função <code>wflow_git_config</code> salvará suas informações de
 nome de usuário e e-mail vinculados à sua conta do GitHub. Isso será
@@ -1371,10 +1446,10 @@ computador.</em></p>
 <p>Agora vamos criar a estrutura de diretório <code>workflowr</code> com
 a função <code>wflow_start</code>. <em>Você já tem um diretório
 principal para o seu projeto, basta copiá-lo e colar aqui.</em></p>
-<pre class="r"><code>wflow_start(directory = &quot;.&quot;,
-          name = &quot;YourRepositoryName&quot;,
-          git = TRUE,
-          existing = TRUE)</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wflow_start</span>(<span class="at">directory =</span> <span class="st">&quot;.&quot;</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">name =</span> <span class="st">&quot;YourRepositoryName&quot;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">git =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">existing =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p><br></p>
 <blockquote>
 <p>Obs.:</p>
@@ -1460,7 +1535,7 @@ dim(iris)</code></pre>
 <code>2 + 2</code> é = 4, tudo que você precisa fazer é escrever seu
 código cercado por um par de aspas simples e a letra <code>r</code>
 assim.</p>
-<pre class="r"><code># Dois mais dois é igual a `r 2 + 2`</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dois mais dois é igual a `r 2 + 2`</span></span></code></pre></div>
 <p><br></p>
 <p><code>R markdown</code> permite que você crie <code>chuncks</code>
 para várias linguagens de programação, como python, c++…</p>
@@ -1487,7 +1562,7 @@ de referência R Markdown</a> - do RStudio.</li>
 <h2>Usando <code>workflowr</code></h2>
 <p>Vamos abrir o arquivo <code>index.Rmd</code> usando a função
 <code>wflow_open</code></p>
-<pre class="r"><code>wflow_open(&quot;analysis/index.Rmd&quot;)</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wflow_open</span>(<span class="st">&quot;analysis/index.Rmd&quot;</span>)</span></code></pre></div>
 <p><br></p>
 <p>Uma guia do <code>R Markdown</code> irá ser aberta no RStudio.</p>
 <p><img src="images/index.jpg" style="width:100.0%" /></p>
@@ -1501,7 +1576,7 @@ Meu primeiro código R neste projeto será nesta [página do hub do git](index.h
 <p>Também é possível criar scrips usando a função
 <code>wflow_open</code>. Vamos criar um arquivo chamado
 <code>PCA.Rmd</code>.</p>
-<pre class="r"><code>wflow_open(&quot;analysis/PCA.Rmd&quot;)</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wflow_open</span>(<span class="st">&quot;analysis/PCA.Rmd&quot;</span>)</span></code></pre></div>
 <p>Isso deve criar o arquivo <code>PCA.Rmd</code> e abri-lo em outra
 guia do Rstudio.</p>
 <p><img src="images/PCARmd.jpg" style="width:100.0%" /></p>
@@ -1530,7 +1605,7 @@ snpashot) as mudanças nos arquivos Rmd na pasta <code>analysis</code>.
 Em seguida, crie ou atualize os arquivos e figuras html e confirme esses
 novos arquivos e figuras html novamente.</p></li>
 </ul>
-<pre class="r"><code>wflow_status()</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wflow_status</span>()</span></code></pre></div>
 <p>Você deve ver algo assim.</p>
 <pre><code>Status of 4 Rmd files
 
@@ -1557,7 +1632,7 @@ The current Git status is:
 <p>Para publicar seu site html usando <code>wflow_publish</code> você
 precisará fornecer uma pequena mensagem que será vinculada à função
 <code>git commit</code>.</p>
-<pre class="r"><code>wflow_publish(files = &quot;analysis/*.Rmd&quot;, mensagem = &quot;Test&quot;)</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wflow_publish</span>(<span class="at">files =</span> <span class="st">&quot;analysis/*.Rmd&quot;</span>, <span class="at">mensagem =</span> <span class="st">&quot;Test&quot;</span>)</span></code></pre></div>
 <pre><code>Current working directory: /Users/USUARIO/Documents/GitHub/GitHub-with-RStudio-LICAE
 Building 3 file(s):
 Building analysis/about.Rmd
@@ -1739,7 +1814,7 @@ Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
 <pre><code>R version 4.1.3 (2022-03-10)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 10 x64 (build 19042)
@@ -1754,21 +1829,17 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
-other attached packages:
-[1] workflowr_1.7.0
-
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.8.3     bslib_0.3.1      compiler_4.1.3   pillar_1.7.0    
- [5] later_1.3.0      git2r_0.30.1     jquerylib_0.1.4  tools_4.1.3     
- [9] getPass_0.2-2    digest_0.6.29    jsonlite_1.8.0   evaluate_0.15   
-[13] tibble_3.1.7     lifecycle_1.0.1  pkgconfig_2.0.3  rlang_1.0.4     
-[17] cli_3.3.0        rstudioapi_0.13  yaml_2.3.5       xfun_0.30       
-[21] fastmap_1.1.0    httr_1.4.3       stringr_1.4.0    knitr_1.39      
-[25] sass_0.4.1       fs_1.5.2         vctrs_0.4.1      rprojroot_2.0.3 
-[29] glue_1.6.2       R6_2.5.1         processx_3.5.3   fansi_1.0.3     
-[33] rmarkdown_2.14   callr_3.7.0      magrittr_2.0.3   whisker_0.4     
-[37] ps_1.6.0         promises_1.2.0.1 htmltools_0.5.2  ellipsis_0.3.2  
-[41] httpuv_1.6.5     utf8_1.2.2       stringi_1.7.6    crayon_1.5.1    </code></pre>
+ [1] Rcpp_1.0.9       rstudioapi_0.13  whisker_0.4      knitr_1.39      
+ [5] magrittr_2.0.3   workflowr_1.7.0  R6_2.5.1         rlang_1.0.4     
+ [9] fastmap_1.1.0    fansi_1.0.3      stringr_1.4.0    tools_4.1.3     
+[13] xfun_0.31        utf8_1.2.2       cli_3.3.0        git2r_0.30.1    
+[17] jquerylib_0.1.4  htmltools_0.5.3  rprojroot_2.0.3  yaml_2.3.5      
+[21] digest_0.6.29    tibble_3.1.8     lifecycle_1.0.1  later_1.3.0     
+[25] sass_0.4.2       vctrs_0.4.1      promises_1.2.0.1 fs_1.5.2        
+[29] cachem_1.0.6     glue_1.6.2       evaluate_0.16    rmarkdown_2.14  
+[33] stringi_1.7.6    bslib_0.4.0      compiler_4.1.3   pillar_1.8.0    
+[37] jsonlite_1.8.0   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
 </div>
 </div>
 </div>
@@ -1789,8 +1860,6 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -1823,35 +1892,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

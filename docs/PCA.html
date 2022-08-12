@@ -18,7 +18,7 @@
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -32,8 +32,8 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -54,18 +54,106 @@ div.section {
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
   }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #232629;
+    color: #7a7c7d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+div.sourceCode
+  { color: #cfcfc2; background-color: #232629; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #cfcfc2; } /* Normal */
+code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+code span.an { color: #3f8058; } /* Annotation */
+code span.at { color: #2980b9; } /* Attribute */
+code span.bn { color: #f67400; } /* BaseN */
+code span.bu { color: #7f8c8d; } /* BuiltIn */
+code span.cf { color: #fdbc4b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #3daee9; } /* Char */
+code span.cn { color: #27aeae; font-weight: bold; } /* Constant */
+code span.co { color: #7a7c7d; } /* Comment */
+code span.cv { color: #7f8c8d; } /* CommentVar */
+code span.do { color: #a43340; } /* Documentation */
+code span.dt { color: #2980b9; } /* DataType */
+code span.dv { color: #f67400; } /* DecVal */
+code span.er { color: #da4453; text-decoration: underline; } /* Error */
+code span.ex { color: #0099ff; font-weight: bold; } /* Extension */
+code span.fl { color: #f67400; } /* Float */
+code span.fu { color: #8e44ad; } /* Function */
+code span.im { color: #27ae60; } /* Import */
+code span.in { color: #c45b00; } /* Information */
+code span.kw { color: #cfcfc2; font-weight: bold; } /* Keyword */
+code span.op { color: #cfcfc2; } /* Operator */
+code span.ot { color: #27ae60; } /* Other */
+code span.pp { color: #27ae60; } /* Preprocessor */
+code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #da4453; } /* SpecialString */
+code span.st { color: #f44f4f; } /* String */
+code span.va { color: #27aeae; } /* Variable */
+code span.vs { color: #da4453; } /* VerbatimString */
+code span.wa { color: #da4453; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
 </script>
-
-
 
 
 
@@ -257,16 +345,16 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="dropdown">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Tutorial
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="index.html">Turorial</a>
-    </li>
     <li>
       <a href="using-this-material.html">Usando este material</a>
     </li>
@@ -286,7 +374,13 @@ $(document).ready(function () {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/wevertongomescosta/GitHub-with-RStudio-LICAE">
+    <span class="fa fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -306,7 +400,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -317,8 +411,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -331,9 +425,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>GitHub-with-RStudio-LICAE/</code>
@@ -356,21 +450,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -461,15 +552,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreeceab82083ae41991b87aafc78fd2a648aa0a5a31targetblankceab820a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreed999186df8ac026ae3da13ba5bd0d37e5940d615targetblankd999186a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/ceab82083ae41991b87aafc78fd2a648aa0a5a31" target="_blank">ceab820</a>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/d999186df8ac026ae3da13ba5bd0d37e5940d615" target="_blank">d999186</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreeceab82083ae41991b87aafc78fd2a648aa0a5a31targetblankceab820a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreed999186df8ac026ae3da13ba5bd0d37e5940d615targetblankd999186a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -479,7 +570,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/ceab82083ae41991b87aafc78fd2a648aa0a5a31" target="_blank">ceab820</a>.
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/d999186df8ac026ae3da13ba5bd0d37e5940d615" target="_blank">d999186</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -497,12 +588,7 @@ Ignored files:
     Ignored:    .Rproj.user/
 
 Unstaged changes:
-    Modified:   analysis/PCA.Rmd
-    Modified:   analysis/about.Rmd
-    Modified:   analysis/index.Rmd
-    Modified:   analysis/license.Rmd
-    Modified:   analysis/pre-requisitos.Rmd
-    Modified:   analysis/using-this-material.Rmd
+    Modified:   analysis/_site.yml
 
 </code></pre>
 <p>
@@ -547,6 +633,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/blob/512947f3b8d4a330814e38da9274d145294cc6ca/analysis/PCA.Rmd" target="_blank">512947f</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-12
+</td>
+<td>
+Update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/512947f3b8d4a330814e38da9274d145294cc6ca/docs/PCA.html" target="_blank">512947f</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-08-12
+</td>
+<td>
+Update
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -627,7 +747,7 @@ class="section level1">
 <h1>Principal Components analysis with Iris data</h1>
 <div id="collecting-data" class="section level2">
 <h2>Collecting data</h2>
-<pre class="r"><code>data &lt;- iris</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> iris</span></code></pre></div>
 <p><br></p>
 </div>
 <div id="preparing-data-for-the-principal-components-analysis-pca"
@@ -636,7 +756,7 @@ class="section level2">
 <p>let’s prepare this prepare this data to plot some boxplot of all the
 four traits, for that you will need the function <code>melt</code> of
 the <code>reshape2</code> package and the tidyverse package.</p>
-<pre class="r"><code>install.packages(&quot;reshape2&quot;, repos = &quot;https://cloud.r-project.org&quot;)</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;reshape2&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;https://cloud.r-project.org&quot;</span>)</span></code></pre></div>
 <pre><code>Installing package into &#39;C:/Users/USUARIO/Documents/R/win-library/4.1&#39;
 (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>package &#39;reshape2&#39; successfully unpacked and MD5 sums checked</code></pre>
@@ -648,8 +768,8 @@ Permission denied</code></pre>
 <pre><code>Warning: restored &#39;reshape2&#39;</code></pre>
 <pre><code>
 The downloaded binary packages are in
-    C:\Users\USUARIO\AppData\Local\Temp\RtmpkB0acj\downloaded_packages</code></pre>
-<pre class="r"><code>library(reshape2); library(tidyverse)</code></pre>
+    C:\Users\USUARIO\AppData\Local\Temp\RtmpyEQfw8\downloaded_packages</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2); <span class="fu">library</span>(tidyverse)</span></code></pre></div>
 <pre><code>-- Attaching packages --------------------------------------- tidyverse 1.3.2 --</code></pre>
 <pre><code>v ggplot2 3.3.6     v purrr   0.3.4
 v tibble  3.1.8     v dplyr   1.0.9
@@ -658,11 +778,11 @@ v readr   2.1.2     v forcats 0.5.1
 -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 x dplyr::filter() masks stats::filter()
 x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>dataMelted &lt;- data %&gt;% reshape2::melt(data = .,
-                                      id.vars = &quot;Species&quot;,
-                                      variable.name = &quot;trait&quot;,
-                                      value.name = &quot;y&quot;)
-head(dataMelted)</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dataMelted <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> reshape2<span class="sc">::</span><span class="fu">melt</span>(<span class="at">data =</span> .,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">id.vars =</span> <span class="st">&quot;Species&quot;</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">variable.name =</span> <span class="st">&quot;trait&quot;</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">value.name =</span> <span class="st">&quot;y&quot;</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataMelted)</span></code></pre></div>
 <pre><code>  Species        trait   y
 1  setosa Sepal.Length 5.1
 2  setosa Sepal.Length 4.9
@@ -674,9 +794,9 @@ head(dataMelted)</code></pre>
 <p>Great, now we have the data at the format to make boxplot from all
 traits at the same code line. so lets keep moving. For that we will use
 <code>ggplot2</code> package.</p>
-<pre class="r"><code>dataMelted %&gt;% ggplot(aes(x = Species, y = y, fill = Species)) +
-     geom_boxplot() + facet_wrap(~trait, scales = &quot;free_y&quot;) +
-     theme(legend.position = &quot;none&quot;)</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>dataMelted <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Species, <span class="at">y =</span> y, <span class="at">fill =</span> Species)) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>     <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>trait, <span class="at">scales =</span> <span class="st">&quot;free_y&quot;</span>) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>     <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
 <p><img src="figure/PCA.Rmd/Iris%20traits%20Box%20plots-1.png" width="672" style="display: block; margin: auto;" />
 <br></p>
 <p>Great data, we can see a lot of differences between the
@@ -686,11 +806,11 @@ also have different amplitude for these traits this will certainly
 results in different <code>phenotypic variance</code> between the
 traits, so we need to <code>scale</code> these traits before the
 PCA.</p>
-<pre class="r"><code>DataSc &lt;- data %&gt;% select(-Species) %&gt;%
-     scale(x = ., center = TRUE, scale = TRUE) %&gt;%
-     as.data.frame() %&gt;% 
-     mutate(Species = data$Species)
-head(DataSc)</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>DataSc <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>Species) <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>     <span class="fu">scale</span>(<span class="at">x =</span> ., <span class="at">center =</span> <span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>     <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mutate</span>(<span class="at">Species =</span> data<span class="sc">$</span>Species)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(DataSc)</span></code></pre></div>
 <pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 1   -0.8976739  1.01560199    -1.335752   -1.311052  setosa
 2   -1.1392005 -0.13153881    -1.335752   -1.311052  setosa
@@ -704,7 +824,7 @@ head(DataSc)</code></pre>
 <p>So let’s proceed for the PCA analysis, here we will use the
 <code>prcomp</code> function from <code>R status</code> package, so no
 need to call any package.</p>
-<pre class="r"><code>PCA &lt;- prcomp(DataSc %&gt;% select(-Species))</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>PCA <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(DataSc <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>Species))</span></code></pre></div>
 <p><br></p>
 </div>
 <div id="saving-results" class="section level3">
@@ -713,39 +833,39 @@ need to call any package.</p>
 graphs with them. <br></p>
 <p><strong>1. Accumulate percent of the total phenotypic variance
 explained by the principal components (PC)</strong></p>
-<pre class="r"><code>Perc &lt;- 100 * PCA$sdev^2 / sum(PCA$sdev^2)
-
-PercAc &lt;- as.vector(rep(NA, times = length(Perc)))
-for(i in 1:length(Perc)) {
-  PercAc[i] &lt;- sum(Perc[1:i])
-  names(PercAc)[i] &lt;- i
-}
-names(PercAc) &lt;- c(&quot;PC1&quot;, &quot;PC2&quot;, &quot;PC3&quot;, &quot;PC4&quot;)
-PercAc</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>Perc <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">*</span> PCA<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> <span class="fu">sum</span>(PCA<span class="sc">$</span>sdev<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>PercAc <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">rep</span>(<span class="cn">NA</span>, <span class="at">times =</span> <span class="fu">length</span>(Perc)))</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(Perc)) {</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  PercAc[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(Perc[<span class="dv">1</span><span class="sc">:</span>i])</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(PercAc)[i] <span class="ot">&lt;-</span> i</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(PercAc) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;PC1&quot;</span>, <span class="st">&quot;PC2&quot;</span>, <span class="st">&quot;PC3&quot;</span>, <span class="st">&quot;PC4&quot;</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>PercAc</span></code></pre></div>
 <pre><code>      PC1       PC2       PC3       PC4 
  72.96245  95.81321  99.48213 100.00000 </code></pre>
 <p>Oh these data are high correlated.</p>
 <p><br></p>
 <p><strong>2. Correlations of the traits with the principal components
 (PC)</strong></p>
-<pre class="r"><code>CorTraits &lt;- PCA$rotation
-rownames(CorTraits) &lt;- c(&quot;SepLen&quot;, &quot;SepWid&quot;, &quot;PetLen&quot;, &quot;PetWid&quot;)
-CorTraits</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>CorTraits <span class="ot">&lt;-</span> PCA<span class="sc">$</span>rotation</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(CorTraits) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;SepLen&quot;</span>, <span class="st">&quot;SepWid&quot;</span>, <span class="st">&quot;PetLen&quot;</span>, <span class="st">&quot;PetWid&quot;</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>CorTraits</span></code></pre></div>
 <pre><code>              PC1         PC2        PC3        PC4
 SepLen  0.5210659 -0.37741762  0.7195664  0.2612863
 SepWid -0.2693474 -0.92329566 -0.2443818 -0.1235096
 PetLen  0.5804131 -0.02449161 -0.1421264 -0.8014492
 PetWid  0.5648565 -0.06694199 -0.6342727  0.5235971</code></pre>
-<pre class="r"><code>LabelsPCA &lt;- CorTraits %&gt;% as.data.frame %&gt;%
-     mutate(PC1 = PC1 + 0.15, .keep = &quot;unused&quot;)</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>LabelsPCA <span class="ot">&lt;-</span> CorTraits <span class="sc">%&gt;%</span> as.data.frame <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mutate</span>(<span class="at">PC1 =</span> PC1 <span class="sc">+</span> <span class="fl">0.15</span>, <span class="at">.keep =</span> <span class="st">&quot;unused&quot;</span>)</span></code></pre></div>
 <p><br></p>
 <p><strong>3. Individuals scores for the principal components
 (PC)</strong></p>
-<pre class="r"><code>ScoresSpecies &lt;- PCA$x %&gt;%
-     as.data.frame %&gt;% 
-     mutate(Species = data$Species)
-
-head(ScoresSpecies)</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ScoresSpecies <span class="ot">&lt;-</span> PCA<span class="sc">$</span>x <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>     as.data.frame <span class="sc">%&gt;%</span> </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mutate</span>(<span class="at">Species =</span> data<span class="sc">$</span>Species)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ScoresSpecies)</span></code></pre></div>
 <pre><code>        PC1        PC2         PC3          PC4 Species
 1 -2.257141 -0.4784238  0.12727962  0.024087508  setosa
 2 -2.074013  0.6718827  0.23382552  0.102662845  setosa
@@ -761,9 +881,9 @@ head(ScoresSpecies)</code></pre>
 <p>The first figure will be a barplot of the accumulated variances
 explained by the <code>PC</code>. We will use the color red the PC
 selected to use at the next figures.</p>
-<pre class="r"><code>barplot(PercAc, main = &quot;Variance explained by PCA&quot;,
-        ylab = &quot;Cumulative variance (%)&quot;, xlab = &quot;Number of retained PCs&quot;,
-        col = c(&quot;red&quot;, &quot;red&quot;, &quot;gray&quot;, &quot;gray&quot;, &quot;gray&quot;))</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(PercAc, <span class="at">main =</span> <span class="st">&quot;Variance explained by PCA&quot;</span>,</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Cumulative variance (%)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Number of retained PCs&quot;</span>,</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;gray&quot;</span>, <span class="st">&quot;gray&quot;</span>, <span class="st">&quot;gray&quot;</span>))</span></code></pre></div>
 <p><img src="figure/PCA.Rmd/Barplot%20PCs-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br></p>
 <p>R markdown allows us to hide the code that create the figure, this
@@ -775,18 +895,18 @@ just the result of you chunk, link below.</p>
 <p>The last figure will be a scatter plot of the individuals with their
 score for the first two PCs with the correlation of the traits with the
 first two PCs.</p>
-<pre class="r"><code>ggplot(data = ScoresSpecies, aes(x = PC1, y = PC2, color = Species)) +
-  geom_point() + geom_rug(alpha = 0.2, size = 1.5) +
-  geom_segment(mapping = aes(x = 0, xend = 3*PC1, y = 0, yend = 3*PC2),
-               colour = &quot;red&quot;,
-               data = CorTraits %&gt;% as.data.frame,
-               arrow = arrow(type = &quot;closed&quot;,
-                             length = unit(0.2,units = &quot;cm&quot;))) +
-  geom_text(mapping = aes(x = PC1*3, y = PC2*3, label = rownames(LabelsPCA)),
-            data = LabelsPCA, colour = &quot;black&quot;) + 
-  theme_bw() +
-  xlab(paste(&quot;PC1 - &quot;, round(Perc[1], digits = 2), &quot;%&quot;, sep = &quot;&quot;)) +
-     ylab(paste(&quot;PC2 - &quot;, round(Perc[2], digits = 2), &quot;%&quot;, sep = &quot;&quot;))</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ScoresSpecies, <span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2, <span class="at">color =</span> Species)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_rug</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">3</span><span class="sc">*</span>PC1, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">3</span><span class="sc">*</span>PC2),</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">colour =</span> <span class="st">&quot;red&quot;</span>,</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">data =</span> CorTraits <span class="sc">%&gt;%</span> as.data.frame,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">type =</span> <span class="st">&quot;closed&quot;</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                             <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.2</span>,<span class="at">units =</span> <span class="st">&quot;cm&quot;</span>))) <span class="sc">+</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> PC1<span class="sc">*</span><span class="dv">3</span>, <span class="at">y =</span> PC2<span class="sc">*</span><span class="dv">3</span>, <span class="at">label =</span> <span class="fu">rownames</span>(LabelsPCA)),</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> LabelsPCA, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="fu">paste</span>(<span class="st">&quot;PC1 - &quot;</span>, <span class="fu">round</span>(Perc[<span class="dv">1</span>], <span class="at">digits =</span> <span class="dv">2</span>), <span class="st">&quot;%&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>     <span class="fu">ylab</span>(<span class="fu">paste</span>(<span class="st">&quot;PC2 - &quot;</span>, <span class="fu">round</span>(Perc[<span class="dv">2</span>], <span class="at">digits =</span> <span class="dv">2</span>), <span class="st">&quot;%&quot;</span>, <span class="at">sep =</span> <span class="st">&quot;&quot;</span>))</span></code></pre></div>
 <p><img src="figure/PCA.Rmd/Scatter%20plot%20PCA-1.png" width="672" style="display: block; margin: auto;" />
 <br></p>
 <p>This is the final results of the PC. Mostly of the variance explained
@@ -803,7 +923,7 @@ Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
 <pre><code>R version 4.1.3 (2022-03-10)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 10 x64 (build 19042)

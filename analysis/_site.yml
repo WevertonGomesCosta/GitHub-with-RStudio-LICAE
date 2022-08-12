@@ -4,9 +4,9 @@ navbar:
   title: "GitHub with RStudio LICAE"
   left:
     - text: Home
+      href: index.html
+    - text: Tutorial
       menu:
-      - text: Tutorial
-        href: index.html
       - text: Usando este material
         href: using-this-material.html
       - text: Pre requisitos
