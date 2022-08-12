@@ -1,10 +1,12 @@
 ---
 title: "Usando este material"
-author: "WevertonGomesCosta"
-date: "2022-08-05"
+author: "Costa, W. G."
+date: "`r Sys.Date()`"
+site: workflowr::wflow_site
+url: https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE
 output:
   workflowr::wflow_html:
-    toc: yes
+    toc: FALSE
   highlight: github
 editor_options:
   chunk_output_type: console

@@ -1,10 +1,16 @@
 ---
 title: "License"
+author: "Costa, W. G."
+date: "`r Sys.Date()`"
+site: workflowr::wflow_site
+url: https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE
 output:
   workflowr::wflow_html:
-    toc: false
+    toc: FALSE
+  highlight: github
 editor_options:
   chunk_output_type: console
+github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 ---
 
 Produzido por [Costa, W. G. 2022](https://github.com/WevertonGomesCosta)
