@@ -3,20 +3,20 @@ output_dir: ../docs
 navbar:
   title: "GitHub with RStudio LICAE"
   left:
-  - text: Tutorial
-    menu:
-    - text: Turorial
-      href: index.html
-    - text: Usando este material
-      href: using-this-material.html
-    - text: Pre requisitos
-      href: pre-requisitos.html
-  - text: PCA Example
-    href: PCA.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+    - text: Tutorial
+      menu:
+      - text: Turorial
+        href: index.html
+      - text: Usando este material
+        href: using-this-material.html
+      - text: Pre requisitos
+        href: pre-requisitos.html
+    - text: PCA Example
+      href: PCA.html
+    - text: About
+      href: about.html
+    - text: License
+      href: license.html
   right:
   - icon: fa-github
     text: Source code
