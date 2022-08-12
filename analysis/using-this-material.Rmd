@@ -13,8 +13,10 @@ github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 
 ## Pré-requisitos
 
-1. Você precisa instalar R, Rstudio e pacotes R relevantes *com antecedência*. 
+1. Você precisa instalar R, Rstudio e pacotes R relevantes *com antecedência*.
+
 As instruções estão na próxima seção.
+
 2. Você precisa conhecer pelo menos alguma sintaxe do R. Links para recursos de aprendizagem também são fornecidos em uma seção abaixo. 
 Se você nunca usou R antes, terá problemas para seguir os aspectos de codificação deste manual.
 
