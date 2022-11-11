@@ -92,10 +92,12 @@ Agora vamos criar a estrutura de diretório `workflowr` com a função `wflow_st
 *Você já tem um diretório principal para o seu projeto, basta copiá-lo e colar aqui.*
 
 ```{r Iniciar o projeto, eval = FALSE}
-wflow_start(directory = ".",
-          name = "YourRepositoryName",
-          git = TRUE,
-          existing = TRUE)
+wflow_start(
+  directory = ".",
+  name = "YourRepositoryName",
+  git = TRUE,
+  existing = TRUE
+)
 ```
 
 <br>
