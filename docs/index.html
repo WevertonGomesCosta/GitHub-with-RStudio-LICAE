@@ -11,14 +11,14 @@
 
 <meta name="author" content="Costa, W. G." />
 
-<meta name="date" content="2022-08-25" />
+<meta name="date" content="2022-12-14" />
 
 <title>Tutorial</title>
 
-<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -31,6 +31,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
@@ -91,46 +94,38 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    background-color: #232629;
-    color: #7a7c7d;
+    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { color: #cfcfc2; background-color: #232629; }
+  {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span { color: #cfcfc2; } /* Normal */
-code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
-code span.an { color: #3f8058; } /* Annotation */
-code span.at { color: #2980b9; } /* Attribute */
-code span.bn { color: #f67400; } /* BaseN */
-code span.bu { color: #7f8c8d; } /* BuiltIn */
-code span.cf { color: #fdbc4b; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #3daee9; } /* Char */
-code span.cn { color: #27aeae; font-weight: bold; } /* Constant */
-code span.co { color: #7a7c7d; } /* Comment */
-code span.cv { color: #7f8c8d; } /* CommentVar */
-code span.do { color: #a43340; } /* Documentation */
-code span.dt { color: #2980b9; } /* DataType */
-code span.dv { color: #f67400; } /* DecVal */
-code span.er { color: #da4453; text-decoration: underline; } /* Error */
-code span.ex { color: #0099ff; font-weight: bold; } /* Extension */
-code span.fl { color: #f67400; } /* Float */
-code span.fu { color: #8e44ad; } /* Function */
-code span.im { color: #27ae60; } /* Import */
-code span.in { color: #c45b00; } /* Information */
-code span.kw { color: #cfcfc2; font-weight: bold; } /* Keyword */
-code span.op { color: #cfcfc2; } /* Operator */
-code span.ot { color: #27ae60; } /* Other */
-code span.pp { color: #27ae60; } /* Preprocessor */
-code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
-code span.sc { color: #3daee9; } /* SpecialChar */
-code span.ss { color: #da4453; } /* SpecialString */
-code span.st { color: #f44f4f; } /* String */
-code span.va { color: #27aeae; } /* Variable */
-code span.vs { color: #da4453; } /* VerbatimString */
-code span.wa { color: #da4453; } /* Warning */
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 </style>
 <script>
@@ -285,8 +280,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -294,16 +289,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -333,6 +321,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -340,6 +391,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -356,12 +417,9 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-<li class="dropdown">
+        <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Tutorial
+    Introdução
      
     <span class="caret"></span>
   </a>
@@ -373,6 +431,9 @@ $(document).ready(function () {
       <a href="pre-requisitos.html">Pre requisitos</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="index.html">Tutorial</a>
 </li>
 <li>
   <a href="PCA.html">PCA Example</a>
@@ -403,47 +464,10 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Tutorial</h1>
 <h4 class="author">Costa, W. G.</h4>
-<h4 class="date">2022-08-25</h4>
+<h4 class="date">2022-12-14</h4>
 
 </div>
 
-<div id="TOC">
-<ul>
-<li><a href="#create_project" id="toc-create_project">Crie um
-projeto</a>
-<ul>
-<li><a href="#crie-um-repositório-github"
-id="toc-crie-um-repositório-github">Crie um repositório GitHub</a></li>
-<li><a href="#crie-um-projeto-workflow"
-id="toc-crie-um-projeto-workflow">Crie um projeto
-<code>workflow</code></a>
-<ul>
-<li><a href="#iniciando-seu-projeto-de-workflow"
-id="toc-iniciando-seu-projeto-de-workflow">Iniciando seu projeto de
-workflow</a></li>
-</ul></li>
-<li><a href="#funções-do-tidyverse"
-id="toc-funções-do-tidyverse">Funções do Tidyverse</a>
-<ul>
-<li><a href="#code-chunks" id="toc-code-chunks">Code chunks</a></li>
-</ul></li>
-<li><a href="#usando-rmarkdown" id="toc-usando-rmarkdown">Usando
-Rmarkdown</a></li>
-<li><a href="#usando-workflowr" id="toc-usando-workflowr">Usando
-<code>workflowr</code></a></li>
-<li><a href="#usando-o-git-para-salvar-suas-atualizações-no-github"
-id="toc-usando-o-git-para-salvar-suas-atualizações-no-github">Usando o
-Git para salvar suas atualizações no GitHub</a>
-<ul>
-<li><a href="#git-no-rstudio" id="toc-git-no-rstudio">Git no
-RStudio</a></li>
-</ul></li>
-<li><a href="#publicando-no-github-páginas"
-id="toc-publicando-no-github-páginas">Publicando no GitHub
-(Páginas)</a></li>
-</ul></li>
-</ul>
-</div>
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
@@ -469,7 +493,7 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-08-25
+<strong>Last updated:</strong> 2022-12-14
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -507,10 +531,10 @@ changes </a>
 <div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has staged changes. To know which version of the
-R Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
 <code>wflow_publish</code> to commit the R Markdown file and build the
 HTML.</p>
 </div>
@@ -603,15 +627,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreeea21fb86bc76c9c12a4e487128085a0d02835b5btargetblankea21fb8a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtree95b0cf21fa5f20468a31b454c0f76bd769169a1ctargetblank95b0cf2a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/ea21fb86bc76c9c12a4e487128085a0d02835b5b" target="_blank">ea21fb8</a>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/95b0cf21fa5f20468a31b454c0f76bd769169a1c" target="_blank">95b0cf2</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtreeea21fb86bc76c9c12a4e487128085a0d02835b5btargetblankea21fb8a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomWevertonGomesCostaGitHubwithRStudioLICAEtree95b0cf21fa5f20468a31b454c0f76bd769169a1ctargetblank95b0cf2a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -621,7 +645,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/ea21fb86bc76c9c12a4e487128085a0d02835b5b" target="_blank">ea21fb8</a>.
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/tree/95b0cf21fa5f20468a31b454c0f76bd769169a1c" target="_blank">95b0cf2</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -638,8 +662,14 @@ were generated:
 Ignored files:
     Ignored:    .Rproj.user/
 
-Staged changes:
+Unstaged changes:
+    Modified:   analysis/PCA.Rmd
+    Modified:   analysis/_site.yml
+    Modified:   analysis/about.Rmd
     Modified:   analysis/index.Rmd
+    Modified:   analysis/license.Rmd
+    Modified:   analysis/pre-requisitos.Rmd
+    Modified:   analysis/using-this-material.Rmd
 
 </code></pre>
 <p>
@@ -684,6 +714,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/blob/95b0cf21fa5f20468a31b454c0f76bd769169a1c/analysis/index.Rmd" target="_blank">95b0cf2</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-11-11
+</td>
+<td>
+Update Images
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/WevertonGomesCosta/GitHub-with-RStudio-LICAE/95b0cf21fa5f20468a31b454c0f76bd769169a1c/docs/index.html" target="_blank">95b0cf2</a>
+</td>
+<td>
+WevertonGomesCosta
+</td>
+<td>
+2022-11-11
+</td>
+<td>
+Update Images
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1934,14 +1998,14 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.9       rstudioapi_0.13  whisker_0.4      knitr_1.39      
- [5] magrittr_2.0.3   workflowr_1.7.0  R6_2.5.1         rlang_1.0.4     
+ [1] Rcpp_1.0.9       rstudioapi_0.14  whisker_0.4      knitr_1.40      
+ [5] magrittr_2.0.3   workflowr_1.7.0  R6_2.5.1         rlang_1.0.6     
  [9] fastmap_1.1.0    fansi_1.0.3      stringr_1.4.1    tools_4.1.3     
 [13] xfun_0.32        utf8_1.2.2       cli_3.3.0        git2r_0.30.1    
 [17] jquerylib_0.1.4  htmltools_0.5.3  rprojroot_2.0.3  yaml_2.3.5      
-[21] digest_0.6.29    tibble_3.1.8     lifecycle_1.0.1  later_1.3.0     
+[21] digest_0.6.29    tibble_3.1.8     lifecycle_1.0.3  later_1.3.0     
 [25] sass_0.4.2       vctrs_0.4.1      promises_1.2.0.1 fs_1.5.2        
-[29] cachem_1.0.6     glue_1.6.2       evaluate_0.16    rmarkdown_2.15  
+[29] cachem_1.0.6     glue_1.6.2       evaluate_0.17    rmarkdown_2.17  
 [33] stringi_1.7.6    bslib_0.4.0      compiler_4.1.3   pillar_1.8.1    
 [37] jsonlite_1.8.0   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
 </div>
@@ -1964,6 +2028,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -1996,6 +2062,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

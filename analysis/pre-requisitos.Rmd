@@ -4,13 +4,12 @@ author: "Costa, W. G."
 date: "`r Sys.Date()`"
 site: workflowr::wflow_site
 url: https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE
+
 output:
   workflowr::wflow_html:
     toc: FALSE
-  highlight: github
 editor_options:
   chunk_output_type: console
-github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 ---
 
 # Pré requisitos para o Curso Integrando GitHub com o RStudio
