@@ -1,10 +1,10 @@
 ---
 title: "Tutorial"
-author: "Costa, W. G."
+author: 
+  - Costa, W. G.^[Weverton Gomes da Costa, Pós-Doutorando, Departamento de Estatística - UFV, wevertonufv@gmail.com]
 date: "`r Sys.Date()`"
 site: workflowr::wflow_site
 url: https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE
-
 output:
   workflowr::wflow_html
 editor_options:
