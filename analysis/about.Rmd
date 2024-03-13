@@ -1,7 +1,5 @@
 ---
 title: "Sobre"
-author: 
-  - Costa, W. G.^[Weverton Gomes da Costa, Pós-Doutorando, Departamento de Estatística - UFV, wevertonufv@gmail.com]
 date: "`r Sys.Date()`"
 site: workflowr::wflow_site
 url: https://wevertongomescosta.github.io/GitHub-with-RStudio-LICAE
@@ -15,4 +13,13 @@ github-repo: wevertongomescosta/GitHub-with-RStudio-LICAE
 
 # Manual: Integrando o GitHub com o Rstudio. 
 Bem-vindo! Esse manual irá ensinar como realizar todo o processo de criação de um repositório no GitHub até a integração do GitHub com o RStudio, visando otimizar e permitir a reprodução de materiais para o meio acadêmico.
-Esse curso foi desenvolvido para a capacitação dos membros do [Laboratório de Inteligência Computacional e Aprendizado Estatístico - LICAE](https://www.licae.ufv.br/).
+Esse curso foi desenvolvido para a capacitação dos membros do LICAE^[[Laboratório de Inteligência Computacional e Aprendizado Estatístico - Universidade Federal de Viçosa](https://www.licae.ufv.br/)].
+
+# Manual: Integrating GitHub with Rstudio.
+Welcome! This manual will teach you how to carry out the entire process from creating a repository on GitHub to integrating GitHub with RStudio, aiming to optimize and allow the reproduction of materials for the academic world.
+This course was developed to train members of the LICAE.
+
+
+Author:
+
+Costa, W. G.^[Weverton Gomes da Costa, Post-Doctoral, Department of Statistics at the Federal University of Viçosa, weverton.costa@ufv.br]

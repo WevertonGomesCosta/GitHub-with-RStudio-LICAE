@@ -2,12 +2,14 @@ name: "GitHub-with-RStudio-LICAE"
 output_dir: ../docs
 navbar:
   title: "GitHub with RStudio LICAE"
+  href: about.html
   left:
     - text: Introdução
+      href: using-this-material.html
       menu:
       - text: Usando este material
         href: using-this-material.html
-      - text: Pre requisitos
+      - text: Prerequisites
         href: pre-requisitos.html
     - text: Tutorial
       href: index.html
